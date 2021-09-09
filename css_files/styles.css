@@ -1,0 +1,25 @@
+/*h1 defined for the title*/
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+/*these classes defines the row of links at the top */  
+.browse_pages {
+    background-color: #143650;
+}
+
+.browse_pages ul {
+    list-style-type: none;
+    height: 30px;
+    padding-top: 10px;
+}
+
+.browse_pages ul li {
+    font-size: 110%;
+    color: white;
+    font-weight: bold;
+    display: inline;
+    margin-right: 150px;
+}
+/* end of definition for row of links */
