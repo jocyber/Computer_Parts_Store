@@ -1,25 +1,72 @@
-/*h1 defined for the title*/
-h1 {
-    text-align: center;
-    font-weight: bold;
+html, body {
+    height: 100%;
+    margin: 0px; /* Remove the margin around the body */
+}
+
+/*main search bar*/
+form div input {
+    width: 850px;
+    height: 38px;
+    border-radius: 4px;
+    margin-left: 24.4%;
+    margin-top: 15px;
+    margin-bottom: -20%;
+}
+
+/*shopping cart image*/
+#shopping {
+    border: 2px solid transparent;
+    position: static;
+
+    background-color: transparent;
+    float: right;
+    width: 3%;
+    margin-right: 5%;
+    margin-top: 1.5%;
+    margin-left: 0px;
+}
+
+#shopping:hover {
+    border: 2px dotted white;
 }
 
 /*these classes defines the row of links at the top */  
 .browse_pages {
-    background-color: #143650;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+
+    background-color: #124669;
 }
 
 .browse_pages ul {
     list-style-type: none;
-    height: 30px;
-    padding-top: 10px;
+    height: 10px;
+    text-align: center;
+    margin-top: .5%;
+
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .browse_pages ul li {
-    font-size: 110%;
-    color: white;
+    font-size: 90%;
+    color: #E7AC08;
     font-weight: bold;
     display: inline;
-    margin-right: 150px;
+    margin-right: 40px;
+}
+
+.browse_pages ul li:hover {
+    text-decoration: underline;
 }
 /* end of definition for row of links */
+
+#banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 55%;
+}

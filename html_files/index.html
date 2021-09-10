@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 
+<!--Web application for CSCI 4300-->
+<!--Project authors: Jordan Harman, -->
+
 <html lang="en-US">
     <head>
+        <meta charset="UTF-8">
         <link rel="stylsheet" text="text/css" href="../css_files/normalize.css">
         <link rel="stylesheet" text="text/css" href="../css_files/styles.css">
-    </head>
 
-    <body>
-        <h1>Working Title for Web App</h1>
-        <br>
-        
+        <title>Computer Parts Store</title>
+
+        <!--Search bar-->
         <div class="browse_pages">
+            <div>
+                <img src="../images/shopping_cart.png" id="shopping" title="Shopping Cart">
+            </div>
 
-            <!--List of links to separate pages *design inspired by Amazon, eBay, etc.-->
+            <form> 
+                <div>
+                    <input type="search" name="q" placeholder="Search...">
+                </div>
+            </form>
+
+            <!--links to other pages-->
+            <br>
+
+                <!--List of links to separate pages *design inspired by Amazon, eBay, etc.-->
             <ul>
-                <li><a>Page 1</a></li>
-                <li><a>Page 2</a></li>
-                <li><a>Page 3</a></li>
-                <li><a>Page 4</a></li>
-                <li><a>Page 5</a></li>
+                <li><a>Computer Systems</a></li>
+                <li><a>Components</a></li>
+                <li><a>Electronics</a></li>
+                <li><a>Gaming</a></li>
+                <li><a>Networking Appliances</a></li>
+                <li><a>Office Accessories</a></li>
             </ul>
 
         </div>
+    </head>
 
+    <body>
+        <!--main banner of the website-->
+        <img id="banner" src="../images/computer_shop_banner.jpg" alt="Computer Shop Banner">
     </body>
 </html>
