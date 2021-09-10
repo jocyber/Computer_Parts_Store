@@ -5,10 +5,10 @@ html, body {
 
 /*main search bar*/
 form div input {
-    width: 850px;
+    width: 785px;
     height: 38px;
     border-radius: 4px;
-    margin-left: 24.4%;
+    margin-left: 28%;
     margin-top: 15px;
     margin-bottom: -20%;
 }
@@ -47,7 +47,7 @@ form div input {
     margin-top: .5%;
 
     margin-right: auto;
-    margin-left: auto;
+    margin-left: 7%;
 }
 
 .browse_pages ul li {
