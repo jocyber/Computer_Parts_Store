@@ -1,3 +1,10 @@
+/* for resizing the page*/
+#wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:1300px;
+}
+
 html, body {
     height: 100%;
     margin: 0px; /* Remove the margin around the body */
@@ -8,7 +15,6 @@ form div input {
     width: 785px;
     height: 38px;
     border-radius: 4px;
-    margin-left: 28%;
     margin-top: 15px;
     margin-bottom: -20%;
 }
@@ -30,24 +36,34 @@ form div input {
     border: 2px dotted white;
 }
 
+#search {
+    text-align: center;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
 /*these classes defines the row of links at the top */  
 .browse_pages {
     position: absolute;
+    white-space: nowrap;
     top: 0px;
     left: 0px;
     right: 0px;
+
+    min-width: 1300px;
 
     background-color: #124669;
 }
 
 .browse_pages ul {
+    white-space: nowrap;
     list-style-type: none;
     height: 10px;
     text-align: center;
     margin-top: .5%;
 
     margin-right: auto;
-    margin-left: 7%;
+    margin-left: auto;
 }
 
 .browse_pages ul li {
@@ -71,8 +87,8 @@ li a:hover,a:visited,a:active {
 }
 
 .direct {
-    margin-top: 6.25%;
-    margin-left: 3%;
+    margin-top: 10%;
+    margin-left: 0%;
     font-weight: bold;
     font-size: 105%;
 }
@@ -91,6 +107,6 @@ li a:hover,a:visited,a:active {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
-    width: 55%;
+    margin-top: 7%;
+    width: 70%;
 }
