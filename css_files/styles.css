@@ -110,3 +110,45 @@ li a:hover,a:visited,a:active {
     margin-right: auto;
     width: 55%;
 }
+
+#copy {
+    font-size: 85%;
+    text-align: center;
+}
+
+.title {
+    color: white;
+    font-weight: bold;
+}
+
+/*for the footer*/
+.bottom {
+    background-color: #114364;
+    position: absolute;
+    min-width: 1920px;
+    margin-top: 70px;
+
+    height: 170px;
+}
+
+.bottom ul {
+    white-space: nowrap;
+    display: inline-block;
+    list-style-type: none;
+
+    padding-top: 1%;
+    padding-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 200px;
+    color: lightgray;
+}
+
+.bottom a {
+    color: lightgray;
+    text-decoration: none;
+}
+
+.bottom a:hover {
+    color: lightgray;
+    text-decoration: underline;
+}
