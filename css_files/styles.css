@@ -121,6 +121,23 @@ li a:hover,a:visited,a:active {
     font-weight: bold;
 }
 
+/*information pages styles */
+.information_page {
+    margin-left: 25%;
+    margin-right: 25%;
+    max-width: 900px; 
+}
+
+#links {
+    color: blue;
+    text-decoration: none;
+}
+
+#links:hover {
+    color: rgb(73, 175, 238);
+    text-decoration: none;
+}
+
 /*for the footer*/
 .bottom {
     background-color: #114364;
