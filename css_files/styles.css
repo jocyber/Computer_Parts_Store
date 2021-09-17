@@ -6,6 +6,14 @@
     max-width: 1920px;
 }
 
+#icon {
+    width:80px;
+    height:80px;
+    padding: 2px 0px 0 45px;
+    margin: 1px;
+    float:left
+}
+
 html, body {
     height: 100%;
     margin: 0px; /* Remove the margin around the body */
