@@ -172,3 +172,16 @@ li a:hover,a:visited,a:active {
     color: lightgray;
     text-decoration: underline;
 }
+
+.hours_day {
+    float: left;
+    font-weight: bold;
+    font-size: 170%;
+}
+
+.hours_des {
+    list-style-type: none;
+    float: right;
+    font-weight: bold;
+    font-size: 170%;
+}
