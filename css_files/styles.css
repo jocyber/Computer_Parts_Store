@@ -201,4 +201,10 @@ td {
     background-color: #dddddd;
 }
 
+.map {
+    float: right; 
+    width: 40%;
+    margin-right: 8%;
+}
+
 
