@@ -173,6 +173,7 @@ li a:hover,a:visited,a:active {
     text-decoration: underline;
 }
 
+/* hours list styling */
 .hours_day {
     float: left;
     font-weight: bold;
@@ -185,3 +186,19 @@ li a:hover,a:visited,a:active {
     font-weight: bold;
     font-size: 170%;
 }
+
+/*locations table styling */
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    background-color: #dddddd;
+}
+
+
