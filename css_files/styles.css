@@ -112,7 +112,7 @@ form div input {
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .button {background-color:#f1f1f1; padding-top: 
+.dropdown:hover .button {background-color:#f1f1f1; padding-top: 5px;}
     
 /* end of definition for row of links */
 
