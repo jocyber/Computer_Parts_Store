@@ -49,31 +49,58 @@
     <div id="wrapper">
         <!--main banner of the website-->
         <br><br><br><br><br>
-        <p class="direct"><a id="dir" href="../index.html">Home &nbsp</a><span style="color:gray;"> >&nbsp Hours</span></p>
+        <p class="direct"><a id="dir" href="../index.html">Home &nbsp</a><span style="color:gray;"> >&nbsp Feedback</span></p>
         <hr>
 
-        <!--Hours information-->
-        <div class="information_page" style="max-width: 600px; margin-left: 33%; margin-right: 33%;">
-            <h1 style="text-align: center;">Opening Hours</h1>
-            <h3 style="text-align: center;">2021 Schedule</h3>
+        <!--feedback information-->
+        <div class="information_page" id="eform">
+            <div class="align">
+                <div>
+                    <h1>Send us your Feedback!</h1>
+                </div>
 
-            <br><br>
-            <hr>
-            <!--Hours list-->
-            <ul style="list-style-type: square;">
-                <li class="hours_day">Monday</li> <li class="hours_des">9AM - 8PM</li> <br><br>
-                <li class="hours_day">Tuesday</li> <li class="hours_des">9AM - 8PM</li> <br><br>
-                <li class="hours_day">Wednesday</li> <li class="hours_des">9AM - 8PM</li> <br><br>
-                <li class="hours_day">Thursday</li> <li class="hours_des">9AM - 8PM</li> <br><br>
-                <li class="hours_day">Friday</li> <li class="hours_des">9AM - 7PM</li> <br><br>
-                <li class="hours_day">Saturday</li> <li class="hours_des">10AM - 6PM</li> <br><br>
-                <li class="hours_day">Sunday</li> <li class="hours_des">Closed</li> <br><br>
-            </ul>
+                <!--Information section-->
+                <h3><em>This page is intended for our customers to provide feedback about their experience on the site.</em></h3>
+                <br>
 
-            <hr>
-            <h3 style="text-align: center;"><em>Schedule may vary during holidays</em></h3> <br><br>
-            <h3 style="text-align: center;">www.computerparts.com | TEL. 770-675-8819</h3>
+                <form>
+                        <p>Were you able to acheive your goal on the site?</p>
+                        <input type="radio" id="yes" name="goal" value="Yes">
+                        <label for="yes">Yes</label>
 
+                        <input type="radio" id="partially" name="goal" value="partially">
+                        <label for="partially">Partially</label>
+
+                        <input type="radio" id="no" name="goal" value="No">
+                        <label for="no">No</label>
+                  
+                    <br><br><br>
+
+                    <!--Reason for visit-->
+                    <label for="reason">What is the reason for your visit?</label>
+                    <br><br>
+
+                    <!--dropdown menu-->
+                    <select name="reas" id="reason">
+                        <option value="buy">To Buy an Item</option>
+                        <option value="refund">To Request a Refund</option>
+                        <option value="friend">Buy an Item for a Friend</option>
+                        <option value="price">Find Pricelists</option>
+                        <option value="other">Other...</option>
+                    </select> <br><br><br>
+
+                    <!--additional information-->
+                    <label for="addition">Do you have any other suggestions for our website?</label>
+                    <br><br>
+                    <input type="text" id="addition" name="other" style="width: 65%; padding-bottom: 100px;">
+                    <br><br>
+
+                    <!--Submit and cancel buttoms-->
+                    <input type="submit" value="Submit" class="button">
+                    <input type="reset" value="Cancel" class="button">
+                    <br><br><br>
+                </form>
+            </div>
         </div>
 
         <!--Bottom styling-->
