@@ -47,8 +47,8 @@ form div input {
 }
 
 #search {
-    display: inline-block;
-    margin-left: 19.5%;
+    display: block;
+    margin-left: 22%;
     margin-right: 7%;
 }
 
