@@ -456,6 +456,10 @@ select {
     border: 1px solid gray;
     width: 200px;
     height: 150px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
