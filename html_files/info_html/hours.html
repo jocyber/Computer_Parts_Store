@@ -65,6 +65,12 @@
             <h1 style="text-align: center;">Opening Hours</h1>
             <h3 style="text-align: center;">2021 Schedule</h3>
 
+            <script>
+                let date = new Date();
+                let string = date.getFullYear() + " Schedule";
+                document.querySelector("h3").innerHTML = string;
+            </script>
+
             <br><br>
             <hr>
             <!--Hours list-->
@@ -81,6 +87,7 @@
             <hr>
             <h3 style="text-align: center;"><em>Schedule may vary during holidays</em></h3> <br><br>
             <h3 style="text-align: center;">www.computerparts.com | TEL. 770-675-8819</h3>
+            <h4 id="date"></h4>
 
         </div>
 
