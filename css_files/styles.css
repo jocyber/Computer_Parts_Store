@@ -428,4 +428,34 @@ select {
     padding: 3px;
 }
 
+.page_border {
+    border: 1px solid black;
+    display: block;
+
+    padding: 15px;
+    position: static;
+
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+
+.product_border {
+    border: 1px solid black;
+    display: inline-block;
+
+    width: 230px;
+    height: 350px;
+    padding: 15px;
+
+    position: static;
+    margin: 10px;
+}
+
+.product_image {
+    border: 1px solid gray;
+    width: 200px;
+    height: 150px;
+}
+
 
