@@ -26,6 +26,7 @@ form div input {
     border-radius: 4px;
     margin-top: 15px;
     margin-bottom: -20%;
+    margin-left: 5%
 }
 
 /*shopping cart image*/
@@ -51,10 +52,161 @@ form div input {
     margin-right: 7%;
 }
 
+/* Log in portal style */
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    border: 2px solid transparent;
+    position: static;
+
+    background-color: transparent;
+    float: right;
+    width: 3%;
+    margin-right: 2%;
+    margin-top: 1.5%;
+    margin-left: 0px;   
+}
+
+login:hover {
+    border: 2px dotted white;
+}
+
+/* Formatting image for the log in logo*/
+#close-image img {
+    display: block;
+    height: 40px;  
+    width: 40px;
+}
+
+#close-image:hover {
+    border: 2px dotted white;
+}
+
+/*Extra styles for log in button in the modal*/
+.loginbtn {
+    background-color: #124669;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-right: 0%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: red;
+    color: white;
+
+    border: none;
+    cursor: pointer;
+    float: left;
+    margin-top: -2%;   
+}
+
+/* Check box formatting*/
+.checkbox {
+    border-radius: 0px;
+    margin-top: 3px;
+    margin-left: 0%;
+    cursor: default;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.container {
+  padding: 50px;
+}
+
+span.psw {
+  float: right;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
 /*these classes defines the row of links at the top */  
 .browse_pages {
     position: absolute;
-    white-space: nowrap;
     top: 0px;
     left: 0px;
     right: 0px;
@@ -72,7 +224,7 @@ form div input {
     margin-top: .5%;
 
     margin-right: auto;
-    margin-left: auto;
+    margin-left: 8%;
 }
 
 .browse_pages ul li {
