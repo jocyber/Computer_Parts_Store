@@ -132,9 +132,12 @@ login:hover {
 /* Check box formatting*/
 .checkbox {
     border-radius: 0px;
-    margin-top: 3px;
-    margin-left: 0%;
     cursor: default;
+
+    vertical-align: middle;
+    position: relative;
+    margin-left: 50px;
+
 }
 
 /* Center the image and position the close button */
