@@ -28,25 +28,25 @@
         
             <form class="modal-content animate" action="/action_page.php" method="post">
                 <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                </div>
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    </div>
 
                 <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-                    
-                <button type="submit"  class ="loginbtn">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember" class="checkbox"> Remember me
-                </label>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                        
+                    <button type="submit"  class ="loginbtn">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" class="checkbox"> Remember me
+                    </label>
                 </div>
 
                 <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
                 </div>
             </form>
         </div>
@@ -80,7 +80,7 @@
             <br>
 
             <!--List of links to separate pages *design inspired by Amazon, eBay, etc.-->
-            <ul>
+            <ul id="search_links">
                 <li>
                     <div class="dropdown">
                         <a href="systems.html" class="button">Computer Systems</a>

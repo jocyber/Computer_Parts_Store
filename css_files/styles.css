@@ -47,9 +47,15 @@ form div input {
 }
 
 #search {
-    text-align: center;
-    margin-left: 7%;
+    display: inline-block;
+    margin-left: 19.5%;
     margin-right: 7%;
+}
+
+#search_links {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Log in portal style */
