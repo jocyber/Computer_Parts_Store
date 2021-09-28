@@ -9,7 +9,7 @@
 #icon {
     width:80px;
     height:80px;
-    padding: 2px 0px 0 45px;
+    padding: 2px 0px 0 40px;
     margin: 1px;
     float:left
 }
@@ -85,6 +85,14 @@ login:hover {
     display: block;
     height: 40px;  
     width: 40px;
+
+    border: 2px solid transparent;
+    position: static;
+
+    float: right;
+    margin-right: 3%;
+    margin-top: 1.5%;
+    margin-left: 0px;
 }
 
 #close-image:hover {
