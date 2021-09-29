@@ -478,7 +478,7 @@ select {
     border-radius: 5px;
     margin-top: 5%;
     margin-right: 5%;
-    box-shadow: 1px 2px 7px 1px #e7a355;
+
     cursor: pointer;
     font-weight: bold;
 }
