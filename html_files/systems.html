@@ -17,7 +17,10 @@
         <div>
             <!--shopping cart image-->
             <img src="../images/shopping_cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart">
-            <p style="float: right; color:white;" id="counter">0</p>
+            <p style="float: right; color:#E7AC08;" id="counter"></p>
+            <script>
+                document.getElementById("counter").innerHTML = items_in_cart;
+            </script>
         </div>
 
          <!--Store's logo-->                                                                                                  
@@ -40,7 +43,7 @@
             <ul id="search_links">
                 <li>
                     <div class="dropdown">
-                        <a href="../systems.html" class="button">Computer Systems</a>
+                        <a href="systems.html" class="button">Computer Systems</a>
                         <div class="dropdown-content">
                             <a href="#">Link 1</a>
                             <a href="#">Link 2</a>

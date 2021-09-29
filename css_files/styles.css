@@ -241,7 +241,7 @@ span.psw {
     margin-top: .5%;
 
     margin-right: auto;
-    margin-left: 8%;
+    margin-left: auto;
 }
 
 .browse_pages ul li {
@@ -250,6 +250,7 @@ span.psw {
     font-weight: bold;
     display: inline;
     margin-right: 40px;
+    margin-left: 6px;
 }
 
 /* for the drop down boxes styles*/
