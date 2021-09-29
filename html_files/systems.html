@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width,initial-scale = 1.0,maximum-scale = 1.0”>
         <link rel="stylsheet" text="text/css" href="../css_files/normalize.css">
         <link rel="stylesheet" text="text/css" href="../css_files/styles.css">
+        <script src="../scripts/scripts.js"></script>
 
         <title>Computer Parts Store</title>
     </head>
@@ -14,7 +15,9 @@
         <!--Search bar-->
     <div class="browse_pages">
         <div>
+            <!--shopping cart image-->
             <img src="../images/shopping_cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart">
+            <p style="float: right; color:white;" id="counter">0</p>
         </div>
 
          <!--Store's logo-->                                                                                                  
@@ -66,15 +69,21 @@
             <div class="product_border">
                 <img src="../images/motherboard.png" class="product_image">
                 <h3>MSI Motherboard Red and Black</h3><br>
-                <h2>$78.99</h2>
-                <h3><em>Shipped by Computer Parts</em></h3>
+                <h2 style="float: left;">$78.99</h2>
+                <button class="cart_button" onclick="add_to_cart()">
+                    Add to Cart
+                </button>
+                <h3 style="clear: left;"><em>Shipped by Computer Parts</em></h3>
             </div>
 
             <div class="product_border">
                 <img src="../images/motherboard.png" class="product_image">
                 <h3>MSI Motherboard Red and Black</h3><br>
-                <h2>$78.99</h2>
-                <h3><em>Shipped by Computer Parts</em></h3>
+                <h2 style="float: left;">$78.99</h2>
+                <button class="cart_button" onclick="add_to_cart()">
+                    Add to Cart
+                </button>
+                <h3 style="clear:left;"><em>Shipped by Computer Parts</em></h3>
             </div>
         </div>  
 
