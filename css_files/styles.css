@@ -484,4 +484,10 @@ select {
     font-weight: bold;
 }
 
+/*number styling for shopping cart*/
+.item_num {
+    float: right; 
+    color:#E7AC08;
+}
+
 
