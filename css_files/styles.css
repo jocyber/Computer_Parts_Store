@@ -26,7 +26,7 @@ form div input {
     border-radius: 4px;
     margin-top: 15px;
     margin-bottom: -20%;
-    margin-left: -2%
+    margin-left: 5%
 }
 
 /*shopping cart image*/
@@ -54,7 +54,7 @@ form div input {
 
 #search_links {
     display: inline-block;
-    margin-left: -8%;
+    margin-left: auto;
     margin-right: auto;
 }
 
