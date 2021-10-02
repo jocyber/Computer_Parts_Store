@@ -98,7 +98,7 @@ login:hover {
     float: right;
     margin-right: 3%;
     margin-top: 1.5%;
-    margin-left: 0px;
+    margin-left: 3%;;
 }
 
 #close-image:hover {
@@ -228,7 +228,7 @@ span.psw {
     left: 0px;
     right: 0px;
 
-    min-width: 1300px;
+    min-width: 1400px;
 
     background-color: #124669;
 }
