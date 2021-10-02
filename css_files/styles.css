@@ -448,7 +448,8 @@ select {
 .product_border {
     display: block;
 
-    width: 70%;
+    min-width: 1200px;
+    max-width: 1200px;
     height: 250px;
     padding: 15px;
 
@@ -460,7 +461,8 @@ select {
 
 .bottom_line {
     display: block;
-    width: 70%;
+    min-width: 1200px;
+    max-width: 1200px;
     position: static;
 
     margin-left: 28.5px;
