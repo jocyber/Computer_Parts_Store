@@ -103,7 +103,7 @@
 
         <!--where products appear-->
         <div class="page_border">
-            <?php $tab = "systems"; require_once('../PHP_files/query_database.php'); ?>
+            <?php $tab = "components"; require_once('../PHP_files/query_database.php'); ?>
         </div>
 
         <!--Bottom styling-->

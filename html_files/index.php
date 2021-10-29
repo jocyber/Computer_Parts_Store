@@ -84,21 +84,12 @@
 
             <!--List of links to separate pages *design inspired by Amazon, eBay, etc.-->
             <ul id="search_links">
-                <li>
-                    <div class="dropdown">
-                        <a href="systems.php" class="button">Computer Systems</a>
-                        <div class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
-                        </div>
-                    </div>
-                </li>
-                <li><a>Components</a></li>
-                <li><a>Electronics</a></li>
-                <li><a>Gaming</a></li>
-                <li><a>Networking Appliances</a></li>
-                <li><a>Office Accessories</a></li>
+                <li><a href="systems.php">Computer Systems</a></li>
+                <li><a href="components.php">Components</a></li>
+                <li><a href="eletronics.php">Electronics</a></li>
+                <li><a href="gaming.php">Gaming</a></li>
+                <li><a href="network.php">Networking Appliances</a></li>
+                <li><a href="office.php">Office Accessories</a></li>
             </ul>
         </div>
 
