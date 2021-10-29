@@ -68,7 +68,7 @@
 
          <!--Store's logo-->                                                                                                  
          <div>
-            <a href="index.html">
+            <a href="index.php">
              <img src="../images/happy-anime.gif" alt="kawaii anime" title="home page" id="icon">
 	        </a>
         </div>
@@ -107,7 +107,7 @@
     <div id="wrapper">
         <!--beginning of shopping section-->
         <br><br><br><br><br>
-        <p class="direct"><a id="dir" href="index.html">Home &nbsp</a><span style="color:gray;"> >&nbsp Computer Systems</span></p>
+        <p class="direct"><a id="dir" href="index.php">Home &nbsp</a><span style="color:gray;"> >&nbsp Computer Systems</span></p>
         <hr>
 
         <!--where products appear-->
@@ -120,38 +120,45 @@
                 </select>
             </form> 
 
-            <div class="product_border">
-                <a href="../images/motherboard.png" target="_blank"><img src="../images/motherboard.png" class="product_image"></a>
+            <?php 
+            $conn = mysqli_connect("localhost:3307", "root", "", "computer_store");
 
-                <div class="format_info">
-                    <h3 class="product_title">MSI Motherboard Gaming Motherboard (AMD, DDR4, PCIe 4.0, M.2)</h3><br>
-                    <h2 style="margin-top: -2%;">$78.99</h2>
+            if(!$conn) {
+                die("Connection to the database failed: ".mysqli_connect_error());
+            }
 
-                    <h3><em>Shipped by Computer Parts</em></h3>
+            $result = mysqli_query($conn, "select * from systems;");
+            $resultCheck = mysqli_num_rows($result);
 
-                    <button class="cart_button" onclick="add_to_cart()">
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-            <hr class="bottom_line">
+            if($resultCheck > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    $name = $row["Name"];
+                    $path = $row["img_dir"];
+                    $price = $row["Price"];
 
-            <div class="product_border">
-                <a href="../images/motherboard.png" target="_blank"><img src="../images/motherboard.png" class="product_image"></a>
+                    $price_string = "$".$price;
 
-                <div class="format_info">
-                    <h3 class="product_title">MSI Motherboard Gaming Motherboard (AMD, DDR4, PCIe 4.0, M.2)</h3><br>
-                    <h2 style="margin-top: -2%;">$78.99</h2>
-
-                    <h3><em>Shipped by Computer Parts</em></h3>
-
-                    <button class="cart_button" onclick="add_to_cart()">
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-            <hr class="bottom_line">
-        </div>  
+                    echo "<div class='product_border'>
+                    <a href='$path' target='_blank'><img src='$path' class='product_image'></a>
+    
+                    <div class='format_info'>
+                        <h3 class='product_title'>$name</h3><br>
+                        <h2 style='margin-top: -2%;'>$price_string</h2>
+    
+                        <h3><em>Shipped by Computer Parts</em></h3>
+    
+                        <button class='cart_button' onclick='add_to_cart()'>
+                            Add to Cart
+                        </button>
+                    </div>
+                    </div>
+                    "."<hr class='bottom_line'>";
+                }
+            }   
+            
+            mysqli_close($conn);
+        ?>
+        </div>
 
         <!--Bottom styling-->
         <div class="bottom">
