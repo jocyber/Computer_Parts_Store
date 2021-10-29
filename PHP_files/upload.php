@@ -17,6 +17,7 @@
         $dbName = "computer_store";
 
         $table = "systems";
+        $folder = "Systems";
 
         if(isset($_POST["submit"])) {
             $conn = mysqli_connect($serverName, $username, $password, $dbName);
@@ -37,7 +38,7 @@
             $fileActualExt = strtolower(end($fileExt));
 
             $name = $fileExt[0];
-            $img_path = '../images/Products/';
+            $img_path = '../images/Products/'.$folder.'/';
             $allowed = array("png", "jpg", "jpeg");
 
             if(in_array($fileActualExt, $allowed)) {

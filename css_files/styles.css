@@ -474,7 +474,7 @@ select {
 .product_image {
     border: 1px solid gray;
     width: 200px;
-    height: 200px;
+    height: 170px;
 
     display: block;
     float: left;
@@ -483,8 +483,8 @@ select {
 
 .cart_button {
     background-color: #e77f08;
-    width: 140px;
-    height: 40px;
+    width: 120px;
+    height: 30px;
     border-radius: 5px;
 
     cursor: pointer;
@@ -499,7 +499,7 @@ select {
 }
 
 .product_title {
-    font-size: 130%;
+    font-size: 115%;
     font-weight: normal;
 }
 
