@@ -16,7 +16,7 @@
     <div class="browse_pages">
         <div>
             <!--shopping cart image-->
-            <img src="../images/shopping_cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart">
+            <a href="shopping.html"><img src="../images/shopping_cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>
             <p class="item_num" id="counter"></p>
         </div>
 	
