@@ -14,11 +14,11 @@
     <body>
         <!--Search bar-->
     <div class="browse_pages">
-        <div>
-            <!--shopping cart image-->
-            <img src="../images/shopping_cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart">
-            <p class="item_num" id="counter"></p>
-        </div>
+	<div>
+	    <!--shopping cart image-->
+            <a href="shopping.html"><img src="../images/shopping_cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>
+	    <p class="item_num" id="counter"></p>														  
+        </div>		     
 	
 	<!--Log in--> 
 
