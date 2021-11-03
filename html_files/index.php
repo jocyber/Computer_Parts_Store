@@ -69,7 +69,7 @@
         <!--Store's logo-->                                                                                                  
         <div>
             <a href="index.php">
-             <img src="../images/happy-anime.gif" alt="kawaii anime" title="home page" id="icon">
+             <img src="../images/logo.png" alt="kawaii anime" title="home page" id="icon">
 	        </a>
         </div>                                                                                                  
 
@@ -99,21 +99,6 @@
         <!--main banner of the website-->
         <br><br><br><br><br>
         <img id="banner" src="../images/computer_shop_banner.jpg" alt="Computer Shop Banner">
-
-        <!--Loading information from database-->
-        <?php
-            $query = "select * from users;";
-            $result = mysqli_query($conn, $query);
-            $resultCheck = mysqli_num_rows($result);
-
-            if($resultCheck > 0) {
-                while($row = mysqli_fetch_assoc($result)) {
-                    echo $row["ID"]." ";
-                    echo $row["Username"]." ";
-                    echo $row["password"]."<br>";
-                }
-            }
-        ?>
 
         <!--Bottom styling-->
         <div class="bottom">
