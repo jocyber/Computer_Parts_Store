@@ -10,6 +10,7 @@
 
     if($resultCheck > 0) {
         while($row = mysqli_fetch_assoc($result)) {
+
             $name = $row["Name"];
             $path = $row["img_dir"];
             $price = $row["Price"];

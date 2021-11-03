@@ -4,9 +4,11 @@
     <head></head>
 
     <body>
+        <br>
         <form action="" method="POST" enctype="multipart/form-data">
             <input type="file" name="file">
-            <button type="submit" name="submit">Upload</button>
+            <br><br>
+            <button type="submit" name="submit" class="cart_button">Upload</button>
         </form>
     </body>
 
@@ -17,7 +19,6 @@
         $dbName = "computer_store";
 
         $table = "products";
-        $folder = "Components"; // chnage based on item to insert
 
         $type = strtolower($folder);
 
@@ -67,9 +68,6 @@
                 else {
                     echo "Error occured while uploading file to database.";
                 }
-            }
-            else {
-                echo "file not allowed, stupid";
             }
         }
     ?>

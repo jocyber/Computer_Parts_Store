@@ -6,3 +6,4 @@ function add_to_cart() {
     document.getElementById("counter").innerHTML = items_in_cart;
 }
 
+
