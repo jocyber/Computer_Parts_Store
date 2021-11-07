@@ -11,7 +11,7 @@
     height:80px;
     padding: 2px 0px 0 40px;
     margin: 1px;
-    float:left
+    float:left;
 }
 
 html, body {
@@ -26,7 +26,7 @@ form div input {
     border-radius: 4px;
     margin-top: 15px;
     margin-bottom: -20%;
-    margin-left: 5%
+    margin-left: 5%;
 }
 
 /*shopping cart image*/
@@ -253,39 +253,6 @@ span.psw {
     margin-left: 6px;
 }
 
-/* for the drop down boxes styles*/
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.button {
-    background-color: initial;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #124669;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-.dropdown-content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .button {padding-top: 5px;}
-    
-/* end of definition for row of links */
-
 li a:link {
     text-decoration: none;
     color: #E7AC08;
@@ -457,6 +424,16 @@ select {
     margin: 10px;
     margin-left: 28.5px;
     margin-right: 28.5px;
+}
+
+.image {
+    border: 1px solid gray;
+    width: 200px;
+    height: 170px;
+
+    display: block;
+    float: left;
+    margin-left: 2.5%;
 }
 
 .bottom_line {

@@ -5,7 +5,7 @@
         die("Connection to the database failed: ".mysqli_connect_error());
     }
 
-    $result = mysqli_query($conn, "select * from products where type='$tab';");
+    $result = mysqli_query($conn, "select * from products limit 5;");
     $resultCheck = mysqli_num_rows($result);
 
     if($resultCheck > 0) {
@@ -17,21 +17,18 @@
 
             $price_string = "$".$price;
 
-            echo "<div class='product_border' style='background-color: #F7F7F7;>
-            <a href='$path' target='_blank'><img src='$path' class='product_image'></a>
+            echo "<div style='position: static; float: left; min-width: 300px; max-width:300px; padding: 10px; margin: 10px;'>
+                <a href='$path' target='_blank'><img src='$path' class='product_image'></a>
+                <h3 style='clear:left; font-size: 90%; max-width: 200px; margin-left: 2.5%;'>$name</h3>
+                <h2 style='clear: left; font-size: 110%; margin-left: 2.5%;'>$price_string</h2>
 
-            <div class='format_info''>
-                <h3 class='product_title'>$name</h3><br>
-                <h2 style='margin-top: -2%;'>$price_string</h2>
+                <h3 style='margin-left: 2.5%;'><em>Shipped by Computer Parts</em></h3>
 
-                <h3><em>Shipped by Computer Parts</em></h3>
-
-                <button class='cart_button' onclick='add_to_cart()'>
+                <button style='margin-left: 2.5%;' class='cart_button' onclick='add_to_cart()'>
                     Add to Cart
                 </button>
             </div>
-            </div>
-            "."<hr class='bottom_line'>";
+            ";
         }
     }
     else {

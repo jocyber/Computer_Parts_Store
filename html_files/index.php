@@ -11,6 +11,16 @@
         <link rel="stylesheet" text="text/css" href="../css_files/styles.css">
 
         <title>Computer Parts Store</title>
+
+        <style>
+            #mainPageStuff {
+                font-weight: bold; 
+                font-size: 200%; 
+                font-family: Impact; 
+                color: darkblue;
+                margin-left: 1.5%;
+            }
+        </style>
     </head>
 
     <body>
@@ -100,6 +110,15 @@
         <br><br><br><br><br>
         <img id="banner" src="../images/computer_shop_banner.jpg" alt="Computer Shop Banner">
 
+        <!--Main page products-->
+        <br>
+        <h2 id="mainPageStuff">Trending Now</h2>
+        <hr>
+
+        <?php require_once('../PHP_files/mainPageQuery.php'); ?>
+        
+        <div style="clear: left;"></div>
+        <br><br>
         <!--Bottom styling-->
         <div class="bottom">
             <footer>
@@ -121,7 +140,6 @@
         </div>
 
     </div>  
-
     </body>
 
 </html>

@@ -7,8 +7,6 @@
         <link rel="stylesheet" text="text/css" href="../css_files/normalize.css">
         <link rel="stylesheet" text="text/css" href="../css_files/styles.css">
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
         <title>Computer Parts Store</title>
         <script src="../js_files/scripts.js" type="text/javascript"></script>
     </head>
