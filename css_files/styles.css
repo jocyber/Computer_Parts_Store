@@ -284,7 +284,6 @@ li a:hover,a:visited,a:active {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 55%;
 }
 
 .title {
@@ -485,5 +484,4 @@ select {
     float: right; 
     color:#E7AC08;
 }
-
 

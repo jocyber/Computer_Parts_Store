@@ -3,12 +3,24 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale = 1.0,maximum-scale = 1.0”>
         <link rel="stylesheet" text="text/css" href="../css_files/normalize.css">
         <link rel="stylesheet" text="text/css" href="../css_files/styles.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            window.onload = function(){
+                $.ajax({
+                    type: 'GET',
+                    url: '../PHP_files/getItems.php',
+                    success: function(result){
+                        let items_in_cart = result;
+                        console.log(items_in_cart);
+                        document.getElementById("counter").innerHTML = items_in_cart;
+                    }
+                });
+            }
+        </script>
 
         <title>Computer Parts Store</title>
-        <script src="../js_files/scripts.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -16,8 +28,8 @@
     <div class="browse_pages">
 	<div>
 	    <!--shopping cart image-->
-            <a href="shopping.html"><img src="../images/shopping_cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>
-	    <p class="item_num" id="counter"></p>														  
+            <a href="shopping.html"><img src="../images/shopping_cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>	
+            <p class="item_num" id="counter"></p>												  
         </div>		     
 	
 	<!--Log in--> 
@@ -98,7 +110,7 @@
     <div id="wrapper">
         <!--beginning of shopping section-->
 
-        <br><br><br><br><br>
+        <br><br><br><br><br>	
         <p class="direct"><a id="dir" href="index.php">Home &nbsp</a><span style="color:gray;"> >&nbsp Computer Systems</span></p>
         <hr>
 

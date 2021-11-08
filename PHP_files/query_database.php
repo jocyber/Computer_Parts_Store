@@ -25,10 +25,10 @@
                 <h2 style='margin-top: -2%;'>$price_string</h2>
 
                 <h3><em>Shipped by Computer Parts</em></h3>
-
-                <button class='cart_button' onclick='add_to_cart()'>
-                    Add to Cart
-                </button>
+                <form method='post' action='../PHP_files/addToCart.php' onsubmit='setTimeout(function () { window.location.reload(); }, 10)'>
+                    <input type='hidden' value='$name' name='Name'>
+                    <input class='cart_button' type='submit' value='Add to Cart'>
+                </form>
             </div>
             </div>
             "."<hr class='bottom_line'>";

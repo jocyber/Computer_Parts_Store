@@ -6,21 +6,34 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale = 1.0,maximum-scale = 1.0”>
         <link rel="stylesheet" text="text/css" href="../css_files/normalize.css">
         <link rel="stylesheet" text="text/css" href="../css_files/styles.css">
-
-        <title>Computer Parts Store</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            window.onload = function(){
+                $.ajax({
+                    type: 'GET',
+                    url: '../PHP_files/getItems.php',
+                    success: function(result){
+                        let items_in_cart = result;
+                        console.log(items_in_cart);
+                        document.getElementById("counter").innerHTML = items_in_cart;
+                    }
+                });
+            }
+        </script>
 
         <style>
             #mainPageStuff {
-                font-weight: bold; 
-                font-size: 200%; 
-                font-family: Impact; 
                 color: darkblue;
-                margin-left: 1.5%;
+                font-family: Impact;
+                font-size: 180%;
+                font-weight: bold;
+                margin-left: 1%;
             }
         </style>
+
+        <title>Computer Parts Store</title>
     </head>
 
     <body>
@@ -28,6 +41,7 @@
     <div class="browse_pages">
         <div>
             <a href="shopping.html"><img src="../images/shopping_cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>
+            <p class="item_num" id="counter"></p>	
         </div>
         
 	<!--Log in--> 
@@ -108,9 +122,10 @@
     <div id="wrapper">
         <!--main banner of the website-->
         <br><br><br><br><br>
+        <!-- Slideshow container -->
         <img id="banner" src="../images/computer_shop_banner.jpg" alt="Computer Shop Banner">
 
-        <!--Main page products-->
+        <!--Trending-->
         <br>
         <h2 id="mainPageStuff">Trending Now</h2>
         <hr>
@@ -118,6 +133,16 @@
         <?php require_once('../PHP_files/mainPageQuery.php'); ?>
         
         <div style="clear: left;"></div>
+
+        <!--Recommended Components-->
+        <br>
+        <h2 id="mainPageStuff">Components For You</h2>
+        <hr>
+
+        <?php require_once('../PHP_files/recommended.php'); ?>
+
+        <div style="clear: left;"></div>
+
         <br><br>
         <!--Bottom styling-->
         <div class="bottom">
@@ -138,7 +163,6 @@
             </footer>
             <br>
         </div>
-
     </div>  
     </body>
 

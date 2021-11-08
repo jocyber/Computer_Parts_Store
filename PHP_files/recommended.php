@@ -5,7 +5,7 @@
         die("Connection to the database failed: ".mysqli_connect_error());
     }
 
-    $result = mysqli_query($conn, "select * from products order by Name limit 5;");
+    $result = mysqli_query($conn, "select * from products where type='components' order by Price limit 5;");
     $resultCheck = mysqli_num_rows($result);
 
     if($resultCheck > 0) {
