@@ -105,6 +105,22 @@ login:hover {
     border: 2px dotted white;
 }
 
+#hidden-image img {
+    display: block;
+    height: 40px;  
+    width: 40px;
+
+    visibility: hidden;
+
+    border: 2px solid transparent;
+    position: static;
+
+    float: right;
+    margin-right: 3%;
+    margin-top: 1.5%;
+    margin-left: 3%;;
+}
+
 /*Extra styles for log in button in the modal*/
 .loginbtn {
     background-color: #124669;
@@ -284,6 +300,7 @@ li a:hover,a:visited,a:active {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 65%;
 }
 
 .title {

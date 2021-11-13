@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 
 <!--Web application for CSCI 4300-->
@@ -9,19 +13,7 @@
         <link rel="stylesheet" text="text/css" href="../css_files/normalize.css">
         <link rel="stylesheet" text="text/css" href="../css_files/styles.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script type="text/javascript">
-            window.onload = function(){
-                $.ajax({
-                    type: 'GET',
-                    url: '../PHP_files/getItems.php',
-                    success: function(result){
-                        let items_in_cart = result;
-                        console.log(items_in_cart);
-                        document.getElementById("counter").innerHTML = items_in_cart;
-                    }
-                });
-            }
-        </script>
+        <script type="text/javascript" src="../js_files/scripts.js"></script>
 
         <style>
             #mainPageStuff {
@@ -41,18 +33,21 @@
     <div class="browse_pages">
         <div>
             <a href="shopping.html"><img src="../images/shopping_cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>
-            <p class="item_num" id="counter"></p>	
+            <p class="item_num" id="counter">0</p>	
         </div>
         
 	<!--Log in--> 
 
-        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="close-image"><img src="../images/user.png"></button>
+    <?php 
+    if(!isset($_SESSION["uname"])) {
+        echo '
+        <button onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;" id="close-image"><img src="../images/user.png"></button>
 
         <div id="id01" class="modal">
         
-            <form class="modal-content animate" action="/action_page.php" method="post">
+            <form class="modal-content animate" action="../PHP_files/login.php" method="post">
                 <div class="imgcontainer">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <span onclick="document.getElementById(\'id01\').style.display=\'none\'" class="close" title="Close Modal">&times;</span>
                     </div>
 
                 <div class="container">
@@ -67,12 +62,12 @@
 
                 <br><br>
                 <label for="remember" style="display: block;">
-                    <input type="checkbox" name="remember" class="checkbox">Remember me
+                    <input type="checkbox" name="remember" class="checkbox"> Remember me
                 </label>
                 <br><br>
 
                 <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="button" onclick="document.getElementById(\'id01\').style.display=\'none\'" class="cancelbtn">Cancel</button>
                     <span class="psw">Forgot <a href="#">password?</a></span>
                 </div>
             </form>
@@ -80,7 +75,7 @@
 
         <script>
         // Get the modal
-        var modal = document.getElementById('id01');
+        var modal = document.getElementById(\'id01\');
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
@@ -89,11 +84,18 @@
             }
         }
         </script>
+        ';
+    }
+    else {
+        echo "<button style='width:auto;' id='hidden-image'><img src='../images/user.png'></button>";
+    }
+
+    ?>
 
         <!--Store's logo-->                                                                                                  
         <div>
             <a href="index.php">
-             <img src="../images/logo.png" alt="kawaii anime" title="home page" id="icon">
+             <img src="../images/logo.png" alt="Computer Parts Logo" title="home page" id="icon">
 	        </a>
         </div>                                                                                                  
 
