@@ -10,7 +10,6 @@
         <link rel="stylesheet" text="text/css" href="../css_files/normalize.css">
         <link rel="stylesheet" text="text/css" href="../css_files/styles.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script type="text/javascript" src="../js_files/scripts.js"></script>
 
         <title>Computer Parts Store</title>
     </head>
@@ -21,7 +20,7 @@
 	<div>
 	    <!--shopping cart image-->
             <a href="shopping.php"><img src="../images/cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>	
-            <p class="item_num" id="counter">0</p>												  
+            <p class="item_num" id="counter"></p>												  
         </div>		     
 	
 	<!--Log in--> 
@@ -118,17 +117,58 @@
         <!--beginning of shopping section-->
 
         <br><br><br><br><br>	
-        <p class="direct"><a id="dir" href="index.php">Home &nbsp</a><span style="color:lightgray;"> >&nbsp Computer Systems</span></p>
+        <p class="direct"><a id="dir" href="index.php">Home &nbsp</a><span style="color:lightgray;"> >&nbsp Shopping Cart</span></p>
         <hr>
 
-        <div style="float: left;">
-            <?php $folder= "Systems"; require_once('../PHP_files/upload.php'); ?>
-        </div>
+        <br><br>
+        <?php
+            $resultCheck = 0;
 
-        <!--where products appear-->
-        <div class="page_border">
-            <?php $tab = "systems"; require_once('../PHP_files/query_database.php'); ?>
-        </div>
+            if(isset($_SESSION["uname"])) {
+                $conn = mysqli_connect("localhost:3307", "root", "", "computer_store");
+        
+                if(!$conn)
+                    die("Connection to the database failed: ".mysqli_connect_error());
+        
+                $username = $_SESSION["uname"];
+                $password = $_SESSION["passw"];
+        
+                $result = mysqli_query($conn, "select * from cart inner join users on users.Username='$username' and cart.UserID=users.ID;");
+                $resultCheck = mysqli_num_rows($result);
+
+                if($resultCheck != 0) {
+                    echo "<h1 style='color: white; margin-left: 28.5px;'>Shopping Cart</h1> <br><br>";
+                    require_once("../PHP_files/showCart.php");
+                    echo "<br><br>";
+                }
+                else {
+                    echo ' 
+                    <div class="information_page" id="eform">
+                        <div class="align">
+                            <div>
+                                <h1>Your cart is empty.</h1>
+                                <h3>Looking for shopping ideas? Check your home page for recommended products.</h3>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    ';
+                }
+            }
+            else {
+                echo ' 
+                    <div class="information_page" id="eform">
+                        <div class="align">
+                            <div>
+                                <h1>Your cart is empty.</h1>
+                                <h3>Looking for shopping ideas? Check your home page for recommended products.</h3>
+                            </div>
+                            
+                        </div>
+                    </div>
+                ';
+            }
+        ?>
 
         <!--Bottom styling-->
         <div class="bottom">

@@ -346,11 +346,14 @@ li a:hover,a:visited,a:active {
 /*for the footer*/
 .bottom {
     background-color: #010044;
-    position: absolute;
+    position: static;
     min-width: 1920px;
     margin-top: 70px;
 
     height: 170px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
 }
 
 .bottom ul {
