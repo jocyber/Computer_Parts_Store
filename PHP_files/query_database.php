@@ -17,14 +17,14 @@
 
             $price_string = "$".$price;
 
-            echo "<div class='product_border' style='background-color: #F7F7F7;>
+            echo "<div class='product_border' style='background-color: #171717;>
             <a href='$path' target='_blank'><img src='$path' class='product_image'></a>
 
             <div class='format_info''>
                 <h3 class='product_title'>$name</h3><br>
-                <h2 style='margin-top: -2%;'>$price_string</h2>
+                <h2 style='margin-top: -2%; color: white;'>$price_string</h2>
 
-                <h3><em>Shipped by Computer Parts</em></h3>
+                <h3><em style='color: white;'>Shipped by Computer Parts</em></h3>
                 <form method='post' action='../PHP_files/addToCart.php' onsubmit='setTimeout(function () { window.location.reload(); }, 10)'>
                     <input type='hidden' value='$name' name='Name'>
                     <input class='cart_button' type='submit' value='Add to Cart'>
@@ -35,7 +35,7 @@
         }
     }
     else {
-        echo "<h2 style='margin-left: 5%;'>There are no such items for sale at this time.</h2><br><br><br><br>";
+        echo "<h2 style='margin-left: 5%; color: white;'>There are no such items for sale at this time.</h2><br><br><br><br>";
     }   
     
     mysqli_close($conn);

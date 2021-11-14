@@ -15,60 +15,70 @@
         <title>Computer Parts Store</title>
     </head>
 
-    <body>
+    <body style="background-color: #131313;">
         <!--Search bar-->
     <div class="browse_pages">
 	<div>
 	    <!--shopping cart image-->
-            <a href="shopping.html"><img src="../images/shopping_cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>	
+            <a href="shopping.html"><img src="../images/cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>	
             <p class="item_num" id="counter">0</p>												  
         </div>		     
 	
 	<!--Log in--> 
 
-         <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="close-image"><img src="../images/user.png"></button>
+    <?php 
+    if(!isset($_SESSION["uname"])) {
+        echo '
+        <button onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;" id="close-image"><img src="../images/user.png"></button>
 
-         <div id="id01" class="modal">
+        <div id="id01" class="modal">
+        
+            <form class="modal-content animate" action="../PHP_files/login.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById(\'id01\').style.display=\'none\'" class="close" title="Close Modal">&times;</span>
+                    </div>
 
-         <form class="modal-content animate" action="../PHP_files/login.php" method="post">
-             <div class="imgcontainer">
-             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-             </div>
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
 
-             <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                        
+                    <button type="submit"  class ="loginbtn">Login</button>
+                </div>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button type="submit"  class ="loginbtn">Login</button>
-             </div>
-             
-             <br><br>
+                <br><br>
                 <label for="remember" style="display: block;">
-                    <input type="checkbox" name="remember" class="checkbox">Remember me
+                    <input type="checkbox" name="remember" class="checkbox"> Remember me
                 </label>
-            <br><br>
+                <br><br>
 
-             <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-             </div>
-         </form>
-         </div>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById(\'id01\').style.display=\'none\'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
 
-         <script>
-         // Get the modal
-         var modal = document.getElementById('id01');
+        <script>
+        // Get the modal
+        var modal = document.getElementById(\'id01\');
 
-         // When the user clicks anywhere outside of the modal, close it
-         window.onclick = function(event) {
-             if (event.target == modal) {
-                 modal.style.display = "none";
-             }
-         }
-         </script>
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
+        ';
+    }
+    else {
+        echo "<button style='width:auto;' id='hidden-image'><img src='../images/user.png'></button>";
+    }
+
+    ?>
 
          <!--Store's logo-->                                                                                                  
          <div>
@@ -103,7 +113,7 @@
         <!--beginning of shopping section-->
 
         <br><br><br><br><br>	
-        <p class="direct"><a id="dir" href="index.php">Home &nbsp</a><span style="color:gray;"> >&nbsp Computer Systems</span></p>
+        <p class="direct"><a id="dir" href="index.php">Home &nbsp</a><span style="color:lightgray;"> >&nbsp Computer Systems</span></p>
         <hr>
 
         <div style="float: left;">

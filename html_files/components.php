@@ -11,7 +11,7 @@
         <title>Computer Parts Store</title>
     </head>
 
-    <body>
+    <body style="background-color: #131313;">
         <!--Search bar-->
     <div class="browse_pages">
         <div>
