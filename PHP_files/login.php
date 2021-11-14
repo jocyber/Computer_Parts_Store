@@ -16,19 +16,10 @@
     }
 
     function login() {
-        $serverName = "localhost:3307";
-        $username = "root";
-        $password = "";
-        $dbName = "computer_store";
-        
-        $conn = mysqli_connect($serverName, $username, $password, $dbName);
-        
-        if(!$conn) {
-            die("Connection to the database failed: ".mysqli_connect_error());
-        }
-
-        $username = $_POST["uname"];
-        $password = $_POST["psw"];
+        $info = checkDatabase();
+        $username = $info["username"];
+        $password = $info["password"];
+        $conn = $info["connection"];
 
         $login_attempt = mysqli_query($conn, "select * from users where Username='$username' and password='$password'");
         $result = mysqli_fetch_assoc($login_attempt);
@@ -43,21 +34,12 @@
     }
 
     function signup() {
-        $serverName = "localhost:3307";
-        $username = "root";
-        $password = "";
-        $dbName = "computer_store";
-        
-        $conn = mysqli_connect($serverName, $username, $password, $dbName);
-        
-        if(!$conn) {
-            die("Connection to the database failed: ".mysqli_connect_error());
-        }
+        $info = checkDatabase();
+        $username = $info["username"];
+        $password = $info["password"];
+        $conn = $info["connection"];
 
-        $username = $_POST["uname"];
-        $password = $_POST["psw"];
-
-        $login_attempt = mysqli_query($conn, "select * from users where Username='$username' and password='$password'");
+        $login_attempt = mysqli_query($conn, "select * from users where Username='$username'");
         $result = mysqli_fetch_assoc($login_attempt);
 
         if($result == 0) {
@@ -74,5 +56,28 @@
         else { // username is already in use
             mysqli_close($conn);
         }
+    }
+
+    function checkDatabase() {
+        $serverName = "localhost:3307";
+        $username = "root";
+        $password = "";
+        $dbName = "computer_store";
+        
+        $conn = mysqli_connect($serverName, $username, $password, $dbName);
+        
+        if(!$conn) {
+            die("Connection to the database failed: ".mysqli_connect_error());
+        }
+
+        $username = $_POST["uname"];
+        $password = $_POST["psw"];
+
+        $info = array();
+        $info["username"] = $username;
+        $info["password"] = $password;
+        $info["connection"] = $conn;
+
+        return $info;
     }
 ?>
