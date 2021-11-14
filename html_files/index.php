@@ -17,7 +17,7 @@
 
         <style>
             #mainPageStuff {
-                color: darkblue;
+                color: white;
                 font-family: Impact;
                 font-size: 180%;
                 font-weight: bold;
@@ -28,11 +28,11 @@
         <title>Computer Parts Store</title>
     </head>
 
-    <body>
+    <body style="background-color: #131313;">
         <!--Search bar-->
     <div class="browse_pages">
         <div>
-            <a href="shopping.html"><img src="../images/shopping_cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>
+            <a href="shopping.html"><img src="../images/cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>
             <p class="item_num" id="counter">0</p>	
         </div>
         

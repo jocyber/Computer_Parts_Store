@@ -21,6 +21,7 @@ html, body {
 
 /*main search bar*/
 form div input {
+    background: linear-gradient(90deg, rgba(46,0,70,1) 0%, rgba(36,9,121,1) 26%, rgba(35,1,245,1) 100%, rgba(0,144,255,0.9822303921568627) 100%);    color: white;
     width: 785px;
     height: 38px;
     border-radius: 4px;
@@ -33,7 +34,7 @@ form div input {
 #shopping {
     border: 2px solid transparent;
     position: static;
-
+    
     background-color: transparent;
     float: right;
     width: 3%;
@@ -246,7 +247,7 @@ span.psw {
 
     min-width: 1400px;
 
-    background-color: #124669;
+    background-color: #010044;
 }
 
 .browse_pages ul {
