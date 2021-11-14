@@ -427,6 +427,7 @@ select {
     position: relative;
 
     margin-left: 15%;
+    border-color: white;
 }
 
 .product_border {
