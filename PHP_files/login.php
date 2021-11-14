@@ -12,14 +12,15 @@
 
     $username = $_POST["uname"];
     $password = $_POST["psw"];
+    session_start();
+    $id = session_id();
 
-    $query = mysqli_query($conn, "insert into users (Username, password) values ('$username', '$password')");
+    $query = mysqli_query($conn, "insert into users (ID, Username, password) values ('$id', '$username', '$password')");
 
     if(isset($_POST["remember"])) {
         setcookie("uname", $username, time() + 31536000);
     }
 
-    session_start();
     $_SESSION["uname"] = $username;
     $_SESSION["passw"] = $password;
 

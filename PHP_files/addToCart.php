@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     $conn = mysqli_connect("localhost:3307", "root", "", "computer_store");
 
     if(!$conn) {
@@ -13,8 +14,9 @@
     $price = $row['Price'];
     $dir = $row['img_dir'];
     $type = $row['type'];
+    $id = session_id();
 
-    $result = mysqli_query($conn, "insert into cart (Name, Price, img_dir, type) values ('$name', $price, '$dir', '$type');");
+    $result = mysqli_query($conn, "insert into cart (Name, Price, img_dir, type, UserID) values ('$name', $price, '$dir', '$type', '$id');");
     
     mysqli_close($conn);
 ?>
