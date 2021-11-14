@@ -57,7 +57,7 @@
                     <label for="psw"><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" name="psw" required>
                         
-                    <button type="submit"  class ="loginbtn">Login</button>
+                    <button type="submit" class ="loginbtn">Login</button>
                 </div>
 
                 <br><br>
@@ -68,6 +68,7 @@
 
                 <div class="container" style="background-color:#f1f1f1">
                     <button type="button" onclick="document.getElementById(\'id01\').style.display=\'none\'" class="cancelbtn">Cancel</button>
+                    <button type="submit" name="signup" class="cancelbtn">Sign up</button>
                     <span class="psw">Forgot <a href="#">password?</a></span>
                 </div>
             </form>
@@ -87,11 +88,14 @@
         ';
     }
     else {
-        echo "<button style='width:auto;' id='hidden-image'><img src='../images/user.png'></button>";
+        echo "
+        <form method='post' action='../PHP_files/login.php' onsubmit='setTimeout(function () { window.location.reload(); }, 10)'>
+            <input id='logout' type='submit' name='logout' value='Logout'>
+        </form>
+        ";
     }
 
     ?>
-
         <!--Store's logo-->                                                                                                  
         <div>
             <a href="index.php">

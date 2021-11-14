@@ -4,8 +4,10 @@ window.onload = function() {
         type: 'GET',
         url: '../PHP_files/getItems.php',
         success: function(result){
-            let items_in_cart = result;
-            document.getElementById("counter").innerHTML = items_in_cart;
+            if(result !== "") {
+                let items_in_cart = result;
+                document.getElementById("counter").innerHTML = items_in_cart;
+            }
         }
     });
 }

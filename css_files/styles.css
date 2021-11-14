@@ -102,6 +102,22 @@ login:hover {
     margin-left: 3%;;
 }
 
+#logout {
+    background-color: #e77f08;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    display: block;
+    position: static;
+
+    cursor: pointer;
+    font-weight: bold;
+    float: right;
+    margin-right: 3%;
+    margin-top: 3%;
+    margin-left: 3%;;
+}
+
 #close-image:hover {
     border: 2px dotted white;
 }
