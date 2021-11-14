@@ -56,6 +56,7 @@
 
                 <div class="container" style="background-color:#f1f1f1">
                     <button type="button" onclick="document.getElementById(\'id01\').style.display=\'none\'" class="cancelbtn">Cancel</button>
+                    <button type="submit" name="signup" class="cancelbtn">Sign up</button>
                     <span class="psw">Forgot <a href="#">password?</a></span>
                 </div>
             </form>
@@ -75,7 +76,11 @@
         ';
     }
     else {
-        echo "<button style='width:auto;' id='hidden-image'><img src='../images/user.png'></button>";
+        echo "
+        <form method='post' action='../PHP_files/login.php' onsubmit='setTimeout(function () { window.location.reload(); }, 10)'>
+            <input id='logout' type='submit' name='logout' value='Logout'>
+        </form>
+        ";
     }
 
     ?>
@@ -130,16 +135,16 @@
             <footer>
                 <ul>
                     <li class="title">Customer Service</li><br>
-                    <a href="info_html/refunds.html">Return Policy</a><br>
-                    <a href="info_html/privacy.html">Privacy and Security</a><br>
-                    <a href="info_html/feedback.html">Feedback</a>
+                    <a href="info_html/refunds.php">Return Policy</a><br>
+                    <a href="info_html/privacy.php">Privacy and Security</a><br>
+                    <a href="info_html/feedback.php">Feedback</a>
                 </ul>
 
                 <ul>
                     <li class="title">Company Information</li><br>
-                    <a href="info_html/about.html">About Computer Parts</a><br>
-                    <a href="info_html/hours.html">Hours</a><br>
-                    <a href="info_html/locations.html">Locations</a><br>
+                    <a href="info_html/about.php">About Computer Parts</a><br>
+                    <a href="info_html/hours.php">Hours</a><br>
+                    <a href="info_html/locations.php">Locations</a><br>
                 </ul>
             </footer>
             <br>

@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 
 <html lang="en-US">
@@ -6,6 +10,7 @@
         <meta name="viewport" content="width=device-width,initial-scale = 1.0,maximum-scale = 1.0”>
         <link rel="stylesheet" text="text/css" href="../css_files/normalize.css">
         <link rel="stylesheet" text="text/css" href="../css_files/styles.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="../js_files/scripts.js" type="text/javascript"></script>
 
         <title>Computer Parts Store</title>
@@ -16,55 +21,70 @@
     <div class="browse_pages">
         <div>
             <!--shopping cart image-->
-            <a href="shopping.html"><img src="../images/shopping_cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>
-            <p class="item_num" id="counter"></p>
+            <a href="shopping.html"><img src="../images/cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>
+            <p class="item_num" id="counter">0</p>
         </div>
 	
 	<!--Log in--> 
 
-         <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="close-image"><img src="../images/user.png"></button>
+    <?php 
+    if(!isset($_SESSION["uname"])) {
+        echo '
+        <button onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;" id="close-image"><img src="../images/user.png"></button>
 
-         <div id="id01" class="modal">
+        <div id="id01" class="modal">
+        
+            <form class="modal-content animate" action="../PHP_files/login.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById(\'id01\').style.display=\'none\'" class="close" title="Close Modal">&times;</span>
+                    </div>
 
-         <form class="modal-content animate" action="/action_page.php" method="post">
-             <div class="imgcontainer">
-             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-             </div>
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
 
-             <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                        
+                    <button type="submit"  class ="loginbtn">Login</button>
+                </div>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button type="submit"  class ="loginbtn">Login</button>
-             </div>
-             
-             <br><br>
+                <br><br>
                 <label for="remember" style="display: block;">
-                    <input type="checkbox" name="remember" class="checkbox">Remember me
+                    <input type="checkbox" name="remember" class="checkbox"> Remember me
                 </label>
-            <br><br>
+                <br><br>
 
-             <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-             </div>
-         </form>
-         </div>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById(\'id01\').style.display=\'none\'" class="cancelbtn">Cancel</button>
+                    <button type="submit" name="signup" class="cancelbtn">Sign up</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
 
-         <script>
-         // Get the modal
-         var modal = document.getElementById('id01');
+        <script>
+        // Get the modal
+        var modal = document.getElementById(\'id01\');
 
-         // When the user clicks anywhere outside of the modal, close it
-         window.onclick = function(event) {
-             if (event.target == modal) {
-                 modal.style.display = "none";
-             }
-         }
-         </script>
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
+        ';
+    }
+    else {
+        echo "
+        <form method='post' action='../PHP_files/login.php' onsubmit='setTimeout(function () { window.location.reload(); }, 10)'>
+            <input id='logout' type='submit' name='logout' value='Logout'>
+        </form>
+        ";
+    }
+
+    ?>
 
          <!--Store's logo-->                                                                                                  
          <div>
@@ -111,16 +131,16 @@
             <footer>
                 <ul>
                     <li class="title">Customer Service</li><br>
-                    <a href="info_html/refunds.html">Return Policy</a><br>
-                    <a href="info_html/privacy.html">Privacy and Security</a><br>
-                    <a href="info_html/feedback.html">Feedback</a>
+                    <a href="info_html/refunds.php">Return Policy</a><br>
+                    <a href="info_html/privacy.php">Privacy and Security</a><br>
+                    <a href="info_html/feedback.php">Feedback</a>
                 </ul>
 
                 <ul>
                     <li class="title">Company Information</li><br>
-                    <a href="info_html/about.html">About Computer Parts</a><br>
-                    <a href="info_html/hours.html">Hours</a><br>
-                    <a href="info_html/locations.html">Locations</a><br>
+                    <a href="info_html/about.php">About Computer Parts</a><br>
+                    <a href="info_html/hours.php">Hours</a><br>
+                    <a href="info_html/locations.php">Locations</a><br>
                 </ul>
             </footer>
             <br>

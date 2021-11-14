@@ -330,6 +330,7 @@ li a:hover,a:visited,a:active {
     margin-left: 25%;
     margin-right: 25%;
     max-width: 900px; 
+    color: white;
 }
 
 #links {
@@ -393,6 +394,7 @@ th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    background-color: #dddddd;
 }
 
 td {
@@ -422,8 +424,8 @@ select {
 }
 
 #eform {
-    border: 1px solid black;
-    background-color: rgb(223, 221, 221);
+    border: 1px solid white;
+    background-color:  #171717;
 }
 
 .align {

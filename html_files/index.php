@@ -155,16 +155,16 @@
             <footer>
                 <ul>
                     <li class="title">Customer Service</li><br>
-                    <a href="info_html/refunds.html">Return Policy</a><br>
-                    <a href="info_html/privacy.html">Privacy and Security</a><br>
-                    <a href="info_html/feedback.html">Feedback</a>
+                    <a href="info_html/refunds.php">Return Policy</a><br>
+                    <a href="info_html/privacy.php">Privacy and Security</a><br>
+                    <a href="info_html/feedback.php">Feedback</a>
                 </ul>
 
                 <ul>
                     <li class="title">Company Information</li><br>
-                    <a href="info_html/about.html">About Computer Parts</a><br>
-                    <a href="info_html/hours.html">Hours</a><br>
-                    <a href="info_html/locations.html">Locations</a><br>
+                    <a href="info_html/about.php">About Computer Parts</a><br>
+                    <a href="info_html/hours.php">Hours</a><br>
+                    <a href="info_html/locations.php">Locations</a><br>
                 </ul>
             </footer>
             <br>
