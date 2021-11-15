@@ -1,5 +1,5 @@
 <?php 
-    require_once("connect_DB.php");
+    require("connect_DB.php");
 
     $result = mysqli_query($conn, "select * from products where type='components' order by Price limit 5;");
     $resultCheck = mysqli_num_rows($result);
