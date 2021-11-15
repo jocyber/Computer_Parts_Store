@@ -106,7 +106,9 @@
         <div id="search">
             <form> 
                 <div>
-                    <input type="search" name="q" placeholder="Search...">
+                    <input style="background: linear-gradient(90deg, rgba(46,0,70,1) 0%, rgba(36,9,121,1) 26%, rgba(35,1,245,1) 100%,
+                     rgba(0,144,255,0.9822303921568627) 100%); color: white; " 
+                    type="search" name="q" placeholder="Search...">
                 </div>
             </form> 
             <!--links to other pages-->

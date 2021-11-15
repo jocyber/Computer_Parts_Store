@@ -19,9 +19,8 @@ html, body {
     margin: 0px; /* Remove the margin around the body */
 }
 
-/*main search bar*/
-form div input {
-    background: linear-gradient(90deg, rgba(46,0,70,1) 0%, rgba(36,9,121,1) 26%, rgba(35,1,245,1) 100%, rgba(0,144,255,0.9822303921568627) 100%);    color: white;
+/*main  bar*/
+form div input {  
     width: 785px;
     height: 38px;
     border-radius: 4px;
