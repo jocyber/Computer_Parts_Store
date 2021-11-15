@@ -1,10 +1,6 @@
 <?php 
     session_start();
-    $conn = mysqli_connect("localhost:3307", "root", "", "computer_store");
-
-    if(!$conn) {
-        die("Connection to the database failed: ".mysqli_connect_error());
-    }
+    require_once("connect_DB.php");
 
     $data = $_POST['Name'];
     $select = mysqli_query($conn, "select * from products where Name='$data'"); // get all the information for the name

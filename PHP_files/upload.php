@@ -13,21 +13,12 @@
     </body>
 
     <?php
-        $serverName = "localhost:3307";
-        $username = "root";
-        $password = "";
-        $dbName = "computer_store";
 
         $table = "products";
-
         $type = strtolower($folder);
 
         if(isset($_POST["submit"])) {
-            $conn = mysqli_connect($serverName, $username, $password, $dbName);
-        
-            if(!$conn) {
-                die("Connection to the database failed: ".mysqli_connect_error());
-            }
+            require_once("connect_DB.php");
 
             $file = $_FILES["file"];
 
