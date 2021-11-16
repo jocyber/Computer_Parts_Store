@@ -8,6 +8,8 @@
     else if(isset($_POST["checkout"]))
         removeAllItems();
 
+    header("Location: ../html_files/index.php");
+
     function addToCart() {
         require_once("connect_DB.php");
         $data = $_POST['Name'];
