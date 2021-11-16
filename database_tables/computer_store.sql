@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2021 at 03:49 AM
+-- Generation Time: Nov 16, 2021 at 04:54 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -92,7 +92,22 @@ INSERT INTO `products` (`ID`, `Name`, `Price`, `img_dir`, `type`) VALUES
 (34, 'ASUS ROG Strix Z590-A Gaming WiFi 6 LGA 1200 (Intel 11th/10th Gen) ATX White Scheme Gaming Motherboard', '99.99', '../images/Products/Components/ASUS ROG Strix Z590-A Gaming WiFi 6 LGA 1200 (Intel 11th10th Gen) ATX White Scheme Gaming Motherboard.jpg', 'components'),
 (35, 'ASRock A520M-HDV AM4 AMD A520 SATA 6Gb/s Micro ATX AMD Motherboard', '62.99', '../images/Products/Components/ASRock A520M-HDV AM4 AMD A520 SATA 6Gbs Micro ATX AMD Motherboard.jpg', 'components'),
 (36, 'be quiet! 250W TDP Dark Rock Pro 4 CPU Cooler with Silent Wings - PWM Fan - 135 mm LGA 1700 Compatible', '82.99', '../images/Products/Components/be quiet! 250W TDP Dark Rock Pro 4 CPU Cooler with Silent Wings - PWM Fan - 135 mm LGA 1700 Compatible.jpg', 'components'),
-(37, 'Intel Core i5-11600K - Core i5 11th Gen Rocket Lake 6-Core 3.9 GHz LGA 1200 125W Intel UHD Graphics 750 Desktop Processor - BX8070811600K', '99.99', '../images/Products/Components/Intel Core i5-11600K - Core i5 11th Gen Rocket Lake 6-Core 3.9 GHz LGA 1200 125W Intel UHD Graphics 750 Desktop Processor - BX8070811600K.jpg', 'components');
+(37, 'Intel Core i5-11600K - Core i5 11th Gen Rocket Lake 6-Core 3.9 GHz LGA 1200 125W Intel UHD Graphics 750 Desktop Processor - BX8070811600K', '99.99', '../images/Products/Components/Intel Core i5-11600K - Core i5 11th Gen Rocket Lake 6-Core 3.9 GHz LGA 1200 125W Intel UHD Graphics 750 Desktop Processor - BX8070811600K.jpg', 'components'),
+(38, 'Nintendo Switch 32GB Console', '99.99', '../images/Products/Gaming/Nintendo Switch 32GB Console.jpg', 'gaming'),
+(39, 'PS5 Playstation 5 Disc Edition Gaming Console', '99.99', '../images/Products/Gaming/PS5 Playstation 5 Disc Edition Gaming Console.jpg', 'gaming'),
+(40, 'Microsoft Xbox One X 1TB Console with Wireless Controller', '99.99', '../images/Products/Gaming/Microsoft Xbox One X 1TB Console with Wireless Controller.jpg', 'gaming'),
+(41, 'TCL 40-inch 1080p Smart LED Roku TV', '99.99', '../images/Products/Electronics/TCL 40-inch 1080p Smart LED Roku TV.jpg', 'electronics'),
+(42, 'Sony DVPSR510H DVD Player', '39.99', '../images/Products/Electronics/Sony DVPSR510H DVD Player.jpg', 'electronics'),
+(43, 'JBL Charge 3 Waterproof Portable Bluetooth Speaker (Black)', '99.99', '../images/Products/Electronics/JBL Charge 3 Waterproof Portable Bluetooth Speaker (Black).jpg', 'electronics'),
+(44, 'Apple Watch SE (GPS, 40mm) - Space Grey Aluminium Case with Midnight Sport Band - Regular', '99.99', '../images/Products/Electronics/Apple Watch SE (GPS, 40mm) - Space Grey Aluminium Case with Midnight Sport Band - Regular.jpg', 'electronics'),
+(45, 'NETGEAR AC1200 Wi-Fi USB 3.0 Adapter', '54.99', '../images/Products/Network/NETGEAR AC1200 Wi-Fi USB 3.0 Adapter.jpg', 'network'),
+(46, 'TP-Link AC1750 Smart WiFi Router', '49.99', '../images/Products/Network/TP-Link AC1750 Smart WiFi Router.jpg', 'network'),
+(47, 'NETGEAR WiFi Router (R6230)', '49.99', '../images/Products/Network/NETGEAR WiFi Router (R6230).jpg', 'network'),
+(48, 'Cat 6 Ethernet Cable 50 ft White', '12.99', '../images/Products/Network/Cat 6 Ethernet Cable 50 ft White.jpg', 'network'),
+(49, 'HP DeskJet 4155e All-in-One Wireless Color Printer', '99.99', '../images/Products/Office/HP DeskJet 4155e All-in-One Wireless Color Printer.jpg', 'office'),
+(50, 'Hammermill Printer Paper, 20 Lb Copy Paper, 11 x 17 - 1 Ream (500 Sheets)', '39.99', '../images/Products/Office/Hammermill Printer Paper, 20 Lb Copy Paper, 11 x 17 - 1 Ream (500 Sheets).jpg', 'office'),
+(51, 'Logitech MK270 Wireless Keyboard and Mouse Combo', '19.99', '../images/Products/Office/Logitech MK270 Wireless Keyboard and Mouse Combo.jpg', 'office'),
+(52, 'Aurora AU1230XA Anti-Jam 12-Sheet Crosscut Paper and Credit Card Shredder', '58.99', '../images/Products/Office/Aurora AU1230XA Anti-Jam 12-Sheet Crosscut Paper and Credit Card Shredder.jpg', 'office');
 
 -- --------------------------------------------------------
 
@@ -149,7 +164,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `users`
