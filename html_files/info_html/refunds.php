@@ -77,7 +77,7 @@
     }
     else {
         echo "
-        <form method='post' action='../../PHP_files/login.php' onsubmit='setTimeout(function () { window.location.reload(); }, 10)'>
+        <form method='post' action='../../PHP_files/login.php'>
             <input id='logout' type='submit' name='logout' value='Logout'>
         </form>
         ";

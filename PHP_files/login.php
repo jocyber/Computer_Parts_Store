@@ -1,7 +1,8 @@
 <?php
+
     session_start();
 
-    if(isset($_POST["logout"]))
+    if(isset($_POST["logout"])) 
         logout();
     else if(isset($_POST["signup"]))
         signup();

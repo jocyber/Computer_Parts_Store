@@ -1,6 +1,6 @@
 <?php
 
-$serverName = "localhost:3307";
+$serverName = "127.0.0.1";
 $username = "root";
 $password = "";
 $dbName = "computer_store";
