@@ -129,7 +129,7 @@
             $resultCheck = 0;
 
             if(isset($_SESSION["uname"])) {
-                require("Location: connect_DB.php");
+                require_once("../PHP_files/connect_DB.php");
                // echo "$_SESSION['uname']";
         
                 $username = $_SESSION["uname"];
