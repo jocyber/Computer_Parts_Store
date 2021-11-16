@@ -20,7 +20,7 @@
     <!--Search bar-->
     <div class="browse_pages">
         <div>
-            <a href="../shopping.html"><img src="../../images/cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>
+            <a href="../shopping.php"><img src="../../images/cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>
             <p class="item_num" id="counter">0</p>	
         </div>
 	<!--Log in--> 

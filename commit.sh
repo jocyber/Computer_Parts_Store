@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 echo "committing to Computer Parts repository."
 echo ""
 

@@ -129,10 +129,8 @@
             $resultCheck = 0;
 
             if(isset($_SESSION["uname"])) {
-                $conn = mysqli_connect("localhost:3307", "root", "", "computer_store");
-        
-                if(!$conn)
-                    die("Connection to the database failed: ".mysqli_connect_error());
+                require("Location: connect_DB.php");
+               // echo "$_SESSION['uname']";
         
                 $username = $_SESSION["uname"];
                 $password = $_SESSION["passw"];
