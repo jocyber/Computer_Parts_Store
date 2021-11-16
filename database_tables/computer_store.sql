@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Generation Time: Nov 15, 2021 at 11:57 PM
+-- Host: 127.0.0.1
+-- Generation Time: Nov 16, 2021 at 03:49 AM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.10
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -83,7 +83,16 @@ INSERT INTO `products` (`ID`, `Name`, `Price`, `img_dir`, `type`) VALUES
 (24, 'Seagate Barracuda 2TB HDD', '67.99', '../images/Products/Components/Seagate Barracuda 2TB HDD.jpg', 'components'),
 (25, 'Western Digital 4TB HDD', '73.21', '../images/Products/Components/Western Digital 4TB HDD.jpg', 'components'),
 (26, 'Intel Core i7-10700K Processor 8 Cored 5 Ghz', '99.99', '../images/Products/Components/Intel Core i7-10700K Processor 8 Cored 5 Ghz.jpg', 'components'),
-(28, 'NZXT ATX Starter Gaming PC', '50.99', '../images/Products/Systems/NZXT ATX Starter Gaming PC.jpg', 'systems');
+(28, 'NZXT ATX Starter Gaming PC', '50.99', '../images/Products/Systems/NZXT ATX Starter Gaming PC.jpg', 'systems'),
+(29, 'Samsung 870 EVO 500GB 2.5 Inch SATA III Internal SSD (MZ-77E500B/AM)', '94.99', '../images/Products/Components/Samsung 870 EVO 500GB 2.5 Inch SATA III Internal SSD (MZ-77E500BAM).jpg', 'components'),
+(30, 'MSI Computer Video Graphic Cards GeForce GTX 1050 TI GAMING X 4G, 4GB', '99.99', '../images/Products/Components/MSI Computer Video Graphic Cards GeForce GTX 1050 TI GAMING X 4G, 4GB.jpg', 'components'),
+(31, '\r\nEVGA GeForce GTX 1060 SC GAMING, ACX 2.0 (Single Fan), 06G-P4-6163-KR, 6GB GDDR5,', '99.99', '../images/Products/Components/EVGA GeForce GTX 1060 SC GAMING, ACX 2.0 (Single Fan), 06G-P4-6163-KR, 6GB GDDR5.jpg', 'components'),
+(32, 'Intel Core i3-10100F - Core i3 10th Gen Comet Lake Quad-Core 3.6 GHz LGA 1200 65W Desktop Processor - BX8070110100F', '99.99', '../images/Products/Components/Intel Core i3-10100F - Core i3 10th Gen Comet Lake Quad-Core 3.6 GHz LGA 1200 65W Desktop Processor - BX8070110100F.jpg', 'components'),
+(33, 'AMD Ryzen 5 5600X - Ryzen 5 5000 Series Vermeer (Zen 3) 6-Core 3.7 GHz Socket AM4 65W Desktop Processor - 100-100000065BOX', '99.99', '../images/Products/Components/AMD Ryzen 5 5600X - Ryzen 5 5000 Series Vermeer (Zen 3) 6-Core 3.7 GHz Socket AM4 65W Desktop Processor - 100-100000065BOX.jpg', 'components'),
+(34, 'ASUS ROG Strix Z590-A Gaming WiFi 6 LGA 1200 (Intel 11th/10th Gen) ATX White Scheme Gaming Motherboard', '99.99', '../images/Products/Components/ASUS ROG Strix Z590-A Gaming WiFi 6 LGA 1200 (Intel 11th10th Gen) ATX White Scheme Gaming Motherboard.jpg', 'components'),
+(35, 'ASRock A520M-HDV AM4 AMD A520 SATA 6Gb/s Micro ATX AMD Motherboard', '62.99', '../images/Products/Components/ASRock A520M-HDV AM4 AMD A520 SATA 6Gbs Micro ATX AMD Motherboard.jpg', 'components'),
+(36, 'be quiet! 250W TDP Dark Rock Pro 4 CPU Cooler with Silent Wings - PWM Fan - 135 mm LGA 1700 Compatible', '82.99', '../images/Products/Components/be quiet! 250W TDP Dark Rock Pro 4 CPU Cooler with Silent Wings - PWM Fan - 135 mm LGA 1700 Compatible.jpg', 'components'),
+(37, 'Intel Core i5-11600K - Core i5 11th Gen Rocket Lake 6-Core 3.9 GHz LGA 1200 125W Intel UHD Graphics 750 Desktop Processor - BX8070811600K', '99.99', '../images/Products/Components/Intel Core i5-11600K - Core i5 11th Gen Rocket Lake 6-Core 3.9 GHz LGA 1200 125W Intel UHD Graphics 750 Desktop Processor - BX8070811600K.jpg', 'components');
 
 -- --------------------------------------------------------
 
@@ -140,7 +149,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `users`
