@@ -141,7 +141,15 @@
                 $resultCheck = mysqli_num_rows($result);
 
                 if($resultCheck != 0) {
-                    echo "<h1 style='color: white; margin-left: 28.5px;'>Shopping Cart</h1> <br><br>";
+                    $name = $_SESSION["uname"];
+                    echo "<h1 style='color: white; margin-left: 28.5px; float: left;'>Shopping Cart</h1> <br><br>";
+
+                    echo "  
+                    <form method='post' action='../PHP_files/addToCart.php' onsubmit='setTimeout(function () { window.location.reload(); }, 10)'>
+                        <input type='hidden' value='$name' name='checkout'>
+                        <input id='checkout_button' type='submit' value='Secure Checkout =>'>
+                    </form><br>";
+
                     require_once("../PHP_files/showCart.php");
                     echo "<br><br>";
                 }

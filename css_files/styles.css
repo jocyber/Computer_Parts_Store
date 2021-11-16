@@ -527,3 +527,23 @@ select {
     color:#E7AC08;
 }
 
+#checkout {
+    float: right;
+    color: white;
+
+    border: 1px solid white;
+    background-color:  #171717;
+}
+
+#checkout_button {
+    background-color: #e77f08;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 2%;
+    margin-top: -1%;
+}
+
