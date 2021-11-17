@@ -145,19 +145,31 @@ session_start();
 
                 if ($result_count > 0) {
                     //display result count
-                    echo $result_count . ' results found';
+                    echo '<div style="text-align:Left; color: white; padding: 1em;font-size: 1.5em"><b>'.$result_count.'</b> results found</div>';
                     //display search results/matches
                     echo '<table class="page_border">';
                     while ($row = mysqli_fetch_assoc($result)) {
-                        echo '<tr>
-                        <td>'.$row['Name'].'</td>
-                        </tr>
-                        <tr>
-                        <td>'.$row['Price'].'</td>
-                        </tr>
-                        <tr>
-                        <td>'.$row['img_dir'].'</td>
-                        </tr>';
+                        $name = $row["Name"];
+                        $path = $row["img_dir"];
+                        $price = $row["Price"];
+            
+                        $price_string = "$".$price;
+            
+                        echo "<div class='product_border' style='background-color: #171717;>
+                        <a href='$path' target='_blank'><img src='$path' class='product_image'></a>
+            
+                        <div class='format_info''>
+                            <h3 class='product_title'>$name</h3><br>
+                            <h2 style='margin-top: -2%; color: white;'>$price_string</h2>
+            
+                            <h3><em style='color: white;'>Shipped by Computer Parts</em></h3>
+                            <form method='post' action='../PHP_files/addToCart.php' onsubmit='setTimeout(function () { window.location.reload(); }, 10)'>
+                                <input type='hidden' value='$name' name='Name'>
+                                <input class='cart_button' type='submit' value='Add to Cart'>
+                            </form>
+                        </div>
+                        </div>
+                        "."<hr class='bottom_line'>";
                     }
                     // end table
                     echo '</table>';
