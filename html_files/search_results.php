@@ -1,35 +1,36 @@
 <?php
-    session_start();
+session_start();
 ?>
 
 <!DOCTYPE html>
 
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale = 1.0,maximum-scale = 1.0”>
-        <link rel="stylesheet" text="text/css" href="../css_files/normalize.css">
-        <link rel="stylesheet" text="text/css" href="../css_files/styles.css">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="../js_files/scripts.js" type="text/javascript"></script>
 
-        <title>Computer Parts Store</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale = 1.0,maximum-scale = 1.0”>
+        <link rel=" stylesheet" text="text/css" href="../css_files/normalize.css">
+    <link rel="stylesheet" text="text/css" href="../css_files/styles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../js_files/scripts.js" type="text/javascript"></script>
 
-    <body style="background-color: #131313;">
-        <!--Search bar-->
+    <title>Computer Parts Store</title>
+</head>
+
+<body style="background-color: #131313;">
+    <!--Search bar-->
     <div class="browse_pages">
         <div>
             <!--shopping cart image-->
             <a href="shopping.php"><img src="../images/cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>
             <p class="item_num" id="counter">0</p>
         </div>
-	
-	<!--Log in--> 
 
-    <?php 
-    if(!isset($_SESSION["uname"])) {
-        echo '
+        <!--Log in-->
+
+        <?php
+        if (!isset($_SESSION["uname"])) {
+            echo '
         <button onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;" id="close-image"><img src="../images/user.png"></button>
 
         <div id="id01" class="modal">
@@ -75,30 +76,29 @@
         }
         </script>
         ';
-    }
-    else {
-        echo "
+        } else {
+            echo "
         <form method='post' action='../PHP_files/login.php'>
             <input id='logout' type='submit' name='logout' value='Logout'>
         </form>
         ";
-    }
+        }
 
-    ?>
+        ?>
 
-         <!--Store's logo-->                                                                                                  
-         <div>
+        <!--Store's logo-->
+        <div>
             <a href="index.php">
-             <img src="../images/logo.png" alt="kawaii anime" title="home page" id="icon">
-	        </a>
+                <img src="../images/logo.png" alt="kawaii anime" title="home page" id="icon">
+            </a>
         </div>
 
         <div id="search">
-            <form action="search_results.php" method="GET"> 
+            <form method="GET">
                 <div>
                     <input type="search" name="q" placeholder="Search...">
                 </div>
-            </form> 
+            </form>
             <!--links to other pages-->
             <br>
 
@@ -118,14 +118,57 @@
     <div id="wrapper">
         <!--beginning of shopping section-->
         <br><br><br><br><br>
-        <p class="direct"><a id="dir" href="index.php">Home &nbsp</a><span style="color:gray;"> >&nbsp Components</span></p>
-        <hr>
 
         <!--where products appear-->
         <div class="page_border">
-            <?php $tab = "components"; require_once('../PHP_files/query_database.php'); ?>
-        </div>
+            <?php
 
+            $conn = mysqli_connect("127.0.0.1", "root", "", "computer_store");
+
+            if (isset($_GET['q']) && $_GET['q'] !=  '') {
+
+                $q = trim($_GET['q']);
+                $terms = explode(' ', $q); //seperate strings into seperate terms
+                $words = '';
+                $sql = "SELECT * FROM products WHERE Name RLIKE ?";
+                foreach ($terms as $tag) {
+                    $words .= $tag . '|';
+                }
+                $words .= substr($words, 0, strlen($words) - 1);
+                //Validating Input
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("s", $words);
+                $stmt->execute();
+                
+                $result = $stmt->get_result() or trigger_error("Query Failed! SQL: $sql - Error: " . mysqli_error($conn), E_USER_ERROR);;
+                $result_count = mysqli_num_rows($result);
+
+                if ($result_count > 0) {
+                    //display result count
+                    echo $result_count . ' results found';
+                    //display search results/matches
+                    echo '<table class="page_border">';
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo '<tr>
+                        <td>'.$row['Name'].'</td>
+                        </tr>
+                        <tr>
+                        <td>'.$row['Price'].'</td>
+                        </tr>
+                        <tr>
+                        <td>'.$row['img_dir'].'</td>
+                        </tr>';
+                    }
+                    // end table
+                    echo '</table>';
+                } else {
+                    echo 'No results found.';
+                }
+            } else {
+                echo ' ';
+            }
+            ?>
+        </div>
         <!--Bottom styling-->
         <div class="bottom">
             <footer>
@@ -145,6 +188,7 @@
             </footer>
             <br>
         </div>
-    </div>  
-    </body>
+    </div>
+</body>
+
 </html>

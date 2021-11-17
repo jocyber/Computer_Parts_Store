@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -8,39 +8,40 @@
 <!--Project authors: Jordan Harman, My Nguyen, -->
 
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" text="text/css" href="../css_files/normalize.css">
-        <link rel="stylesheet" text="text/css" href="../css_files/styles.css">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script type="text/javascript" src="../js_files/scripts.js"></script>
 
-        <style>
-            #mainPageStuff {
-                color: white;
-                font-family: Impact;
-                font-size: 180%;
-                font-weight: bold;
-                margin-left: 1%;
-            }
-        </style>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" text="text/css" href="../css_files/normalize.css">
+    <link rel="stylesheet" text="text/css" href="../css_files/styles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../js_files/scripts.js"></script>
 
-        <title>Computer Parts Store</title>
-    </head>
+    <style>
+        #mainPageStuff {
+            color: white;
+            font-family: Impact;
+            font-size: 180%;
+            font-weight: bold;
+            margin-left: 1%;
+        }
+    </style>
 
-    <body style="background-color: #131313;">
-        <!--Search bar-->
+    <title>Computer Parts Store</title>
+</head>
+
+<body style="background-color: #131313;">
+    <!--Search bar-->
     <div class="browse_pages">
         <div>
             <a href="shopping.php"><img src="../images/cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>
-            <p class="item_num" id="counter">0</p>	
+            <p class="item_num" id="counter">0</p>
         </div>
-        
-	<!--Log in--> 
 
-    <?php 
-    if(!isset($_SESSION["uname"])) {
-        echo '
+        <!--Log in-->
+
+        <?php
+        if (!isset($_SESSION["uname"])) {
+            echo '
         <button onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;" id="close-image"><img src="../images/user.png"></button>
 
         <div id="id01" class="modal">
@@ -86,29 +87,28 @@
         }
         </script>
         ';
-    }
-    else {
-        echo "
+        } else {
+            echo "
         <form method='post' action='../PHP_files/login.php'>
             <input id='logout' type='submit' name='logout' value='Logout'>
         </form>
         ";
-    }
+        }
 
-    ?>
-        <!--Store's logo-->                                                                                                  
+        ?>
+        <!--Store's logo-->
         <div>
             <a href="index.php">
-             <img src="../images/logo.png" alt="Computer Parts Logo" title="home page" id="icon">
-	        </a>
-        </div>                                                                                                  
+                <img src="../images/logo.png" alt="Computer Parts Logo" title="home page" id="icon">
+            </a>
+        </div>
 
         <div id="search">
-            <form> 
+            <form action="search_results.php" method="GET">
                 <div>
                     <input type="search" name="q" placeholder="Search...">
                 </div>
-            </form> 
+            </form>
             <!--links to other pages-->
             <br>
 
@@ -137,7 +137,7 @@
         <hr>
 
         <?php require_once('../PHP_files/mainPageQuery.php'); ?>
-        
+
         <div style="clear: left;"></div>
 
         <!--Recommended Components-->
@@ -169,7 +169,7 @@
             </footer>
             <br>
         </div>
-    </div>  
-    </body>
+    </div>
+</body>
 
 </html>
