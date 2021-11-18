@@ -28,7 +28,8 @@
                 <h2 style='margin-top: -2%; color: white;'>$price_string</h2>
 
                 <h3><em style='color: white;'>Shipped by Computer Parts</em></h3>
-                <form method='post' action='../PHP_files/addToCart.php' onsubmit='setTimeout(function () { window.location.reload(); }, 10)'>
+                <form method='post' action='../PHP_files/addToCart.php'>
+                    <input type='hidden' value='$tab' name='Page'>
                     <input type='hidden' value='$path' name='Remove'>
                     <input class='cart_button' type='submit' value='Delete Item'>
                 </form>

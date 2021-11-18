@@ -148,7 +148,8 @@
                         <input id='checkout_button' type='submit' value='Secure Checkout =>'>
                     </form><br>";
 
-                    require_once("../PHP_files/showCart.php");
+                    $tab = "shopping"; 
+                    require_once('../PHP_files/showCart.php');
                     echo "<br><br>";
                 }
                 else {
