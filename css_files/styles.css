@@ -7,8 +7,8 @@
 }
 
 #icon {
-    width:115px;
-    height:100px;
+    width:105px;
+    height:90px;
     padding: 2px 0px 0 40px;
     margin: 1px;
     float:left;
@@ -116,7 +116,6 @@ login:hover {
     float: right;
     margin-right: 3%;
     margin-top: 3%;
-    margin-left: 3%;;
 }
 
 #close-image:hover {
@@ -516,7 +515,8 @@ select {
 }
 
 .product_title {
-    font-size: 115%;
+    font-size: 105%;
+    word-wrap: break-word;
     font-weight: normal;
     color: white;
 }
