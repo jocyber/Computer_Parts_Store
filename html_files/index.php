@@ -19,6 +19,7 @@
             #mainPageStuff {
                 color: white;
                 font-family: Impact;
+                letter-spacing: 2px;
                 font-size: 180%;
                 font-weight: bold;
                 margin-left: 1%;

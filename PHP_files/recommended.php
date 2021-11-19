@@ -20,9 +20,10 @@
 
                 <h3 style='margin-left: 2.5%;color:white;'><em>Shipped by Computer Parts</em></h3>
 
-                <button style='margin-left: 2.5%;' class='cart_button' onclick='add_to_cart()'>
-                    Add to Cart
-                </button>
+                <form method='post' action='../PHP_files/addToCart.php'>
+                    <input type='hidden' value='$name' name='Name'>
+                    <input class='cart_button' type='submit' value='Add to Cart'>
+                </form>
             </div>
             ";
         }
