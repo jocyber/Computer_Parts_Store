@@ -44,10 +44,11 @@
                         move_uploaded_file($name, $fileDest);
 
                         $price = rand(50, 150); // change based on type of item
+                        $price += .99;
 
                         $img_path = $img_path.$name;
 
-                        $sql = "insert ignore into $table (Name, img_dir, Price, type) values ('$name', '$img_path.$fileExt[1]' ,'$price.99', '$type')";
+                        $sql = "insert ignore into $table (Name, img_dir, Price, type) values ('$name', '$img_path.$fileExt[1]', $price, '$type')";
                         $conn->query($sql) or die($conn->error);
 
                        // header("Location: ../html_files/index.php?uploadsucess");

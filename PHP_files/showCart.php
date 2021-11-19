@@ -7,10 +7,10 @@
 
         $price_string = "$".$price;
 
-        for($i = 0; $i < strlen($name); $i++) {
+        for($i = strlen($name) - 1; $i >= 0; $i--) {
             if($name[$i] == '/') {
                 $name = substr($name, $i + 1, strlen($name));
-                $i = 0;
+                break;
             }
         }
 
