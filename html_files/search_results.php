@@ -174,7 +174,7 @@ session_start();
                     // end table
                     echo '</table>';
                 } else {
-                    echo 'No results found.';
+                    echo '<div style="text-align:Left; color: white; padding: 1em;font-size: 1.5em"><b>No results found.</b> results found</div>';
                 }
             } else {
                 echo ' ';
