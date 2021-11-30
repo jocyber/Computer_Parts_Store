@@ -94,7 +94,7 @@
         </div>
 
         <div id="search">
-            <form method="post"> 
+            <form action="search_results.php" method="GET"> 
                 <div>
                     <input type="search" name="q" placeholder="Search...">
                 </div>
@@ -118,7 +118,7 @@
     <div id="wrapper">
         <!--beginning of shopping section-->
         <br><br><br><br><br>
-        <p class="direct"><a id="dir" href="index.php">Home &nbsp</a><span style="color:gray;"> >&nbsp Computer Systems</span></p>
+        <p class="direct"><a id="dir" href="index.php">Home &nbsp</a><span style="color:gray;"> >&nbsp Components</span></p>
         <hr>
 
         <!--where products appear-->

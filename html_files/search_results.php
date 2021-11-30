@@ -4,44 +4,15 @@ session_start();
 
 <!DOCTYPE html>
 
-<!--Web application for CSCI 4300-->
-<!--Project authors: Jordan Harman, My Nguyen, -->
-
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" text="text/css" href="../css_files/normalize.css">
-        <link rel="stylesheet" text="text/css" href="../css_files/styles.css">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script type="text/javascript" src="../js_files/scripts.js"></script>
-
-        <style>
-            #mainPageStuff {
-                color: white;
-                font-family: Impact;
-                letter-spacing: 2px;
-                font-size: 180%;
-                font-weight: bold;
-                margin-left: 1%;
-            }
-        </style>
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" text="text/css" href="../css_files/normalize.css">
+    <meta name="viewport" content="width=device-width,initial-scale = 1.0,maximum-scale = 1.0”>
+    <link rel=" stylesheet" text="text/css" href="../css_files/normalize.css">
     <link rel="stylesheet" text="text/css" href="../css_files/styles.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script type="text/javascript" src="../js_files/scripts.js"></script>
-
-    <style>
-        #mainPageStuff {
-            color: white;
-            font-family: Impact;
-            font-size: 180%;
-            font-weight: bold;
-            margin-left: 1%;
-        }
-    </style>
+    <script src="../js_files/scripts.js" type="text/javascript"></script>
 
     <title>Computer Parts Store</title>
 </head>
@@ -50,6 +21,7 @@ session_start();
     <!--Search bar-->
     <div class="browse_pages">
         <div>
+            <!--shopping cart image-->
             <a href="shopping.php"><img src="../images/cart.png" id="shopping" title="Shopping Cart" alt="Shopping Cart"></a>
             <p class="item_num" id="counter">0</p>
         </div>
@@ -75,7 +47,7 @@ session_start();
                     <label for="psw"><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" name="psw" required>
                         
-                    <button type="submit" class ="loginbtn">Login</button>
+                    <button type="submit"  class ="loginbtn">Login</button>
                 </div>
 
                 <br><br>
@@ -113,15 +85,16 @@ session_start();
         }
 
         ?>
+
         <!--Store's logo-->
         <div>
             <a href="index.php">
-                <img src="../images/logo.png" alt="Computer Parts Logo" title="home page" id="icon">
+                <img src="../images/logo.png" alt="kawaii anime" title="home page" id="icon">
             </a>
         </div>
 
         <div id="search">
-            <form action="search_results.php" method="GET">
+            <form method="GET">
                 <div>
                     <input type="search" name="q" placeholder="Search...">
                 </div>
@@ -143,30 +116,71 @@ session_start();
     </div>
 
     <div id="wrapper">
-        <!--main banner of the website-->
+        <!--beginning of shopping section-->
         <br><br><br><br><br>
-        <!-- Slideshow container -->
-        <img id="banner" src="../images/computer_shop_banner.jpg" alt="Computer Shop Banner">
 
-        <!--Trending-->
-        <br>
-        <h2 id="mainPageStuff">Trending Now</h2>
-        <hr>
+        <!--where products appear-->
+        <div class="page_border">
+            <?php
 
-        <?php require_once('../PHP_files/mainPageQuery.php'); ?>
+            $conn = mysqli_connect("127.0.0.1", "root", "", "computer_store");
 
-        <div style="clear: left;"></div>
+            if (isset($_GET['q']) && $_GET['q'] !=  '') {
 
-        <!--Recommended Components-->
-        <br>
-        <h2 id="mainPageStuff">Components For You</h2>
-        <hr>
+                $q = trim($_GET['q']);
+                $terms = explode(' ', $q); //seperate strings into seperate terms
+                $words = '';
+                $sql = "SELECT * FROM products WHERE Name RLIKE ?";
+                foreach ($terms as $tag) {
+                    $words .= $tag . '|';
+                }
+                $words .= substr($words, 0, strlen($words) - 1);
+                //Validating Input
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("s", $words);
+                $stmt->execute();
+                
+                $result = $stmt->get_result() or trigger_error("Query Failed! SQL: $sql - Error: " . mysqli_error($conn), E_USER_ERROR);;
+                $result_count = mysqli_num_rows($result);
 
-        <?php require_once('../PHP_files/recommended.php'); ?>
-
-        <div style="clear: left;"></div>
-
-        <br><br>
+                if ($result_count > 0) {
+                    //display result count
+                    echo '<div style="text-align:Left; color: white; padding: 1em;font-size: 1.5em"><b>'.$result_count.'</b> results found</div>';
+                    //display search results/matches
+                    echo '<table class="page_border">';
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $name = $row["Name"];
+                        $path = $row["img_dir"];
+                        $price = $row["Price"];
+            
+                        $price_string = "$".$price;
+            
+                        echo "<div class='product_border' style='background-color: #171717;>
+                        <a href='$path' target='_blank'><img src='$path' class='product_image'></a>
+            
+                        <div class='format_info''>
+                            <h3 class='product_title'>$name</h3><br>
+                            <h2 style='margin-top: -2%; color: white;'>$price_string</h2>
+            
+                            <h3><em style='color: white;'>Shipped by Computer Parts</em></h3>
+                            <form method='post' action='../PHP_files/addToCart.php' onsubmit='setTimeout(function () { window.location.reload(); }, 10)'>
+                                <input type='hidden' value='$name' name='Name'>
+                                <input class='cart_button' type='submit' value='Add to Cart'>
+                            </form>
+                        </div>
+                        </div>
+                        "."<hr class='bottom_line'>";
+                    }
+                    // end table
+                    echo '</table>';
+                } else {
+                    echo 'No results found.';
+                }
+            } else {
+                echo ' ';
+            }
+            ?>
+        </div>
         <!--Bottom styling-->
         <div class="bottom">
             <footer>

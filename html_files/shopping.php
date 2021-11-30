@@ -96,14 +96,13 @@
         </div>
 
         <div id="search">
-            <form method="post"> 
+            <form action="search_results.php" method="GET">
                 <div>
                     <input type="search" name="q" placeholder="Search...">
                 </div>
-            </form> 
+            </form>
             <!--links to other pages-->
             <br>
-
             <!--List of links to separate pages *design inspired by Amazon, eBay, etc.-->
             <ul id="search_links">
                 <li><a href="systems.php">Computer Systems</a></li>
