@@ -106,7 +106,7 @@
             <ul id="search_links">
                 <li><a href="systems.php">Computer Systems</a></li>
                 <li><a href="components.php">Components</a></li>
-                <li><a href="eletronics.php">Electronics</a></li>
+                <li><a href="electronics.php">Electronics</a></li>
                 <li><a href="gaming.php">Gaming</a></li>
                 <li><a href="network.php">Networking Appliances</a></li>
                 <li><a href="office.php">Office Accessories</a></li>
