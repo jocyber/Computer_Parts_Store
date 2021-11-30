@@ -87,13 +87,13 @@
 
          <!--Store's logo-->                                                                                                  
          <div>
-            <a href="../index.php">
-             <img src="../../images/logo.png" alt="kawaii anime" title="home page" id="icon">
+            <a href="index.php">
+             <img src="../images/logo.png" alt="kawaii anime" title="home page" id="icon">
 	        </a>
         </div>
 
         <div id="search">
-            <form> 
+            <form action="search_results.php" method="GET"> 
                 <div>
                     <input type="search" name="q" placeholder="Search...">
                 </div>
@@ -103,12 +103,12 @@
 
             <!--List of links to separate pages *design inspired by Amazon, eBay, etc.-->
             <ul id="search_links">
-                <li><a href="../systems.php">Computer Systems</a></li>
-                <li><a href="../components.php">Components</a></li>
-                <li><a href="../eletronics.php">Electronics</a></li>
-                <li><a href="../gaming.php">Gaming</a></li>
-                <li><a href="../network.php">Networking Appliances</a></li>
-                <li><a href="../office.php">Office Accessories</a></li>
+                <li><a href="systems.php">Computer Systems</a></li>
+                <li><a href="components.php">Components</a></li>
+                <li><a href="electronics.php">Electronics</a></li>
+                <li><a href="gaming.php">Gaming</a></li>
+                <li><a href="network.php">Networking Appliances</a></li>
+                <li><a href="office.php">Office Accessories</a></li>
             </ul>
         </div>
 
