@@ -118,21 +118,21 @@ INSERT INTO `products` (`ID`, `Name`, `Price`, `img_dir`, `type`) VALUES
 CREATE TABLE `users` (
   `ID` int(11) NOT NULL,
   `Username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`ID`, `Username`, `password`) VALUES
-(1, 'johnWick12', 'hellogupta12'),
-(12, 'yala', 'wio'),
-(13, 'hiopooloo', 'weifiwfwif'),
-(15, 'HIYAAAAA', 'igloo'),
-(17, 'yoyospinner', 'eifneifie'),
-(20, 'jojoWick', 'efjoefe');
-
+INSERT INTO `users` (`ID`, `Username`, `password`, `email`) VALUES
+(1, 'johnWick12', 'hellogupta12', 'johnWick12@gmail.com'),
+(12, 'yala', 'wio', 'yala@gmail.com'),
+(13, 'hiopooloo', 'weifiwfwif', 'hiopooloo@gmail.com'),
+(15, 'HIYAAAAA', 'igloo', 'HIYAAAAA@gmail.com'),
+(17, 'yoyospinner', 'eifneifie', 'yoyospinner@gmail.com'),
+(20, 'jojoWick', 'efjoefe', 'jojoWick@gmail.com');
 --
 -- Indexes for dumped tables
 --
