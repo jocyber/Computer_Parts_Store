@@ -88,7 +88,7 @@
          <!--Store's logo-->                                                                                                  
          <div>
             <a href="index.php">
-             <img src="../images/logo.png" alt="kawaii anime" title="home page" id="icon">
+             <img src="../../images/logo.png" alt="kawaii anime" title="home page" id="icon">
 	        </a>
         </div>
 
