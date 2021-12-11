@@ -58,7 +58,7 @@
                 <div class="container" style="background-color:#f1f1f1">
                     <button type="button" onclick="document.getElementById(\'id01\').style.display=\'none\'" class="cancelbtn">Cancel</button>
                     <a href="signup.php">Sign up</a>
-                    <span class="psw">Forgot <a href="reset_password.html">password?</a></span>
+                    <span class="psw">Forgot <a href="reset_password.php">password?</a></span>
                 </div>
             </form>
         </div>
