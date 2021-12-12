@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 16, 2021 at 04:54 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Host: localhost
+-- Generation Time: Dec 12, 2021 at 02:33 AM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 8.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -43,11 +43,12 @@ INSERT INTO `cart` (`Name`, `Price`, `img_dir`, `type`, `UserID`) VALUES
 ('hiopooloo', 67.89, '../images/Products/Systems/Alseye PC Case Aluminium ITX Case for Gaming.jpg', 'systems', 13),
 ('hiopooloo', 50.99, '../images/Products/Systems/NZXT ATX Starter Gaming PC.jpg', 'systems', 13),
 ('hiopooloo', 99.99, '../images/Products/Systems/Thermaltake Gaming PC Case Mid-Tower.jpg', 'systems', 13),
+('HIYAAAAA', 99.99, '../images/Products/Components/AMD Ryzen 7 5700G 8-core Processor.jpg', 'components', 15),
+('HIYAAAAA', 67.89, '../images/Products/Systems/Alseye PC Case Aluminium ITX Case for Gaming.jpg', 'systems', 15),
 ('johnWick12', 50.99, '../images/Products/Components/SAMSUNG M2 SSD 500GB.jpg', 'components', 1),
 ('johnWick12', 67.99, '../images/Products/Components/Seagate Barracuda 2TB HDD.jpg', 'components', 1),
 ('johnWick12', 67.89, '../images/Products/Systems/Alseye PC Case Aluminium ITX Case for Gaming.jpg', 'systems', 1),
-('jojoWick', 93.99, '../images/Products/Components/Cooler Master Hyper Black Edition RGB CPU Cooler.jpg', 'components', 20),
-('yala', 67.89, '../images/Products/Systems/Alseye PC Case Aluminium ITX Case for Gaming.jpg', 'systems', 12);
+('jojoWick', 93.99, '../images/Products/Components/Cooler Master Hyper Black Edition RGB CPU Cooler.jpg', 'components', 20);
 
 -- --------------------------------------------------------
 
@@ -88,11 +89,11 @@ INSERT INTO `products` (`ID`, `Name`, `Price`, `img_dir`, `type`) VALUES
 (30, 'MSI Computer Video Graphic Cards GeForce GTX 1050 TI GAMING X 4G, 4GB', '99.99', '../images/Products/Components/MSI Computer Video Graphic Cards GeForce GTX 1050 TI GAMING X 4G, 4GB.jpg', 'components'),
 (31, '\r\nEVGA GeForce GTX 1060 SC GAMING, ACX 2.0 (Single Fan), 06G-P4-6163-KR, 6GB GDDR5,', '99.99', '../images/Products/Components/EVGA GeForce GTX 1060 SC GAMING, ACX 2.0 (Single Fan), 06G-P4-6163-KR, 6GB GDDR5.jpg', 'components'),
 (32, 'Intel Core i3-10100F - Core i3 10th Gen Comet Lake Quad-Core 3.6 GHz LGA 1200 65W Desktop Processor - BX8070110100F', '99.99', '../images/Products/Components/Intel Core i3-10100F - Core i3 10th Gen Comet Lake Quad-Core 3.6 GHz LGA 1200 65W Desktop Processor - BX8070110100F.jpg', 'components'),
-(33, 'AMD Ryzen 5 5600X - Ryzen 5 5000 Series Vermeer (Zen 3) 6-Core 3.7 GHz Socket AM4 65W Desktop Processor - 100-100000065BOX', '99.99', '../images/Products/Components/AMD Ryzen 5 5600X - Ryzen 5 5000 Series Vermeer (Zen 3) 6-Core 3.7 GHz Socket AM4 65W Desktop Processor - 100-100000065BOX.jpg', 'components'),
+(33, 'AMD Ryzen 5 5600X - Ryzen 5 5000 Series Vermeer (Zen 3) 6-Core 3.7 GHz Socket AM4 65W Desktop Processor', '99.99', '../images/Products/Components/AMD Ryzen 5 5600X - Ryzen 5 5000 Series Vermeer (Zen 3) 6-Core 3.7 GHz Socket AM4 65W.jpg', 'components'),
 (34, 'ASUS ROG Strix Z590-A Gaming WiFi 6 LGA 1200 (Intel 11th/10th Gen) ATX White Scheme Gaming Motherboard', '99.99', '../images/Products/Components/ASUS ROG Strix Z590-A Gaming WiFi 6 LGA 1200 (Intel 11th10th Gen) ATX White Scheme Gaming Motherboard.jpg', 'components'),
 (35, 'ASRock A520M-HDV AM4 AMD A520 SATA 6Gb/s Micro ATX AMD Motherboard', '62.99', '../images/Products/Components/ASRock A520M-HDV AM4 AMD A520 SATA 6Gbs Micro ATX AMD Motherboard.jpg', 'components'),
 (36, 'be quiet! 250W TDP Dark Rock Pro 4 CPU Cooler with Silent Wings - PWM Fan - 135 mm LGA 1700 Compatible', '82.99', '../images/Products/Components/be quiet! 250W TDP Dark Rock Pro 4 CPU Cooler with Silent Wings - PWM Fan - 135 mm LGA 1700 Compatible.jpg', 'components'),
-(37, 'Intel Core i5-11600K - Core i5 11th Gen Rocket Lake 6-Core 3.9 GHz LGA 1200 125W Intel UHD Graphics 750 Desktop Processor - BX8070811600K', '99.99', '../images/Products/Components/Intel Core i5-11600K - Core i5 11th Gen Rocket Lake 6-Core 3.9 GHz LGA 1200 125W Intel UHD Graphics 750 Desktop Processor - BX8070811600K.jpg', 'components'),
+(37, 'Intel Core i5-11600K - Core i5 11th Gen Rocket Lake 6-Core 3.9 GHz LGA 1200 125W Intel UHD Graphics 750', '99.99', '../images/Products/Components/Intel Core i5-11600K - Core i5 11th Gen Rocket Lake 6-Core 3.9 GHz LGA 1200 125W Intel UHD Graphics 750.jpg', 'components'),
 (38, 'Nintendo Switch 32GB Console', '99.99', '../images/Products/Gaming/Nintendo Switch 32GB Console.jpg', 'gaming'),
 (39, 'PS5 Playstation 5 Disc Edition Gaming Console', '99.99', '../images/Products/Gaming/PS5 Playstation 5 Disc Edition Gaming Console.jpg', 'gaming'),
 (40, 'Microsoft Xbox One X 1TB Console with Wireless Controller', '99.99', '../images/Products/Gaming/Microsoft Xbox One X 1TB Console with Wireless Controller.jpg', 'gaming'),
@@ -118,21 +119,22 @@ INSERT INTO `products` (`ID`, `Name`, `Price`, `img_dir`, `type`) VALUES
 CREATE TABLE `users` (
   `ID` int(11) NOT NULL,
   `Username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`ID`, `Username`, `password`, `email`) VALUES
-(1, 'johnWick12', 'hellogupta12', 'johnWick12@gmail.com'),
-(12, 'yala', 'wio', 'yala@gmail.com'),
-(13, 'hiopooloo', 'weifiwfwif', 'hiopooloo@gmail.com'),
-(15, 'HIYAAAAA', 'igloo', 'HIYAAAAA@gmail.com'),
-(17, 'yoyospinner', 'eifneifie', 'yoyospinner@gmail.com'),
-(20, 'jojoWick', 'efjoefe', 'jojoWick@gmail.com');
+INSERT INTO `users` (`ID`, `Username`, `password`) VALUES
+(1, 'johnWick12', 'hellogupta12'),
+(12, 'yala', 'wio'),
+(13, 'hiopooloo', 'weifiwfwif'),
+(15, 'HIYAAAAA', 'igloo'),
+(17, 'yoyospinner', 'eifneifie'),
+(20, 'jojoWick', 'efjoefe'),
+(21, 'daniel.redder', 'password');
+
 --
 -- Indexes for dumped tables
 --
@@ -170,7 +172,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
