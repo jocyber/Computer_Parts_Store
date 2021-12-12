@@ -143,7 +143,7 @@
                     <input type="checkbox" name="remember" class="checkbox" style="margin-left:0px"> Remember me
                 </label>
                 
-                <p>By creating an account you agree to our <a href="privacy.php" style="color:dodgerblue">Privacy and Security</a>.</p>
+                <p>By creating an account you agree to our <a href="info_html/privacy.php" style="color:dodgerblue">Privacy and Security</a>.</p>
 
                 <div class="clearfix">
                 <button type="submit" name ="signup" class="cancelbtn" style="margin-top: 0;">Sign Up</button>

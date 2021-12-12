@@ -121,10 +121,6 @@
         <p class="direct"><a id="dir" href="index.php">Home &nbsp</a><span style="color:lightgray;"> >&nbsp Computer Systems</span></p>
         <hr>
 
-        <div style="float: left;">
-            <?php $folder= "Systems"; require_once('../PHP_files/upload.php'); ?>
-        </div>
-
         <!--where products appear-->
         <div class="page_border">
             <?php $tab = "systems"; require_once('../PHP_files/query_database.php'); ?>

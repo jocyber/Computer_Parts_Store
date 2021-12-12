@@ -121,8 +121,7 @@ session_start();
 
         <!--where products appear-->
         <div class="page_border">
-            <?php
-
+        <?php
             $conn = mysqli_connect("127.0.0.1", "root", "", "computer_store");
 
             if (isset($_GET['q']) && $_GET['q'] !=  '') {
@@ -152,16 +151,16 @@ session_start();
                         $name = $row["Name"];
                         $path = $row["img_dir"];
                         $price = $row["Price"];
-            
+
                         $price_string = "$".$price;
-            
+
                         echo "<div class='product_border' style='background-color: #171717;>
                         <a href='$path' target='_blank'><img src='$path' class='product_image'></a>
-            
+
                         <div class='format_info''>
                             <h3 class='product_title'>$name</h3><br>
                             <h2 style='margin-top: -2%; color: white;'>$price_string</h2>
-            
+
                             <h3><em style='color: white;'>Shipped by Computer Parts</em></h3>
                             <form method='post' action='../PHP_files/addToCart.php' onsubmit='setTimeout(function () { window.location.reload(); }, 10)'>
                                 <input type='hidden' value='$name' name='Name'>

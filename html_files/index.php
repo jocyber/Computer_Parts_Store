@@ -4,27 +4,7 @@ session_start();
 
 <!DOCTYPE html>
 
-<!--Web application for CSCI 4300-->
-<!--Project authors: Jordan Harman, My Nguyen, -->
-
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" text="text/css" href="../css_files/normalize.css">
-        <link rel="stylesheet" text="text/css" href="../css_files/styles.css">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script type="text/javascript" src="../js_files/scripts.js"></script>
-
-        <style>
-            #mainPageStuff {
-                color: white;
-                font-family: Impact;
-                letter-spacing: 2px;
-                font-size: 180%;
-                font-weight: bold;
-                margin-left: 1%;
-            }
-        </style>
 
 <head>
     <meta charset="UTF-8">

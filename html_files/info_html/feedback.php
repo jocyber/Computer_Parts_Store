@@ -92,7 +92,7 @@
         </div>
 
         <div id="search">
-            <form action="search_results.php" method="GET"> 
+            <form action="../search_results.php" method="GET"> 
                 <div>
                     <input type="search" name="q" placeholder="Search...">
                 </div>
