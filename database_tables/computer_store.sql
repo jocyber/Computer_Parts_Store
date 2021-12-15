@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Dec 15, 2021 at 04:39 AM
+-- Generation Time: Dec 15, 2021 at 08:10 PM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.10
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,6 +40,8 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`Name`, `Price`, `img_dir`, `type`, `UserID`) VALUES
+('Detroit', 202.99, '../images/Products/Components/AMD Ryzen 7 5700G 8-core Processor.jpg', 'components', 34),
+('Detroit', 977.89, '../images/Products/Systems/Alseye PC Case Aluminium ITX Case for Gaming.jpg', 'systems', 34),
 ('eofjeoj', 99.99, '../images/Products/Components/AMD Ryzen 5 5600X - Ryzen 5 5000 Series Vermeer (Zen 3) 6-Core 3.7 GHz Socket AM4 65W.jpg', 'components', 33),
 ('eofjeoj', 99.99, '../images/Products/Electronics/TCL 40-inch 1080p Smart LED Roku TV.jpg', 'electronics', 33),
 ('hiopooloo', 67.89, '../images/Products/Systems/Alseye PC Case Aluminium ITX Case for Gaming.jpg', 'systems', 13),
@@ -122,23 +124,26 @@ CREATE TABLE `users` (
   `ID` int(11) NOT NULL,
   `Username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL
+  `email` varchar(255) NOT NULL,
+  `Admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`ID`, `Username`, `password`, `email`) VALUES
-(1, 'johnWick12', 'hellogupta12', 'johnWick12@gmail.com'),
-(12, 'yala', 'wio', 'yala@gmail.com'),
-(13, 'hiopooloo', 'weifiwfwif', 'hiopooloo@gmail.com'),
-(15, 'HIYAAAAA', 'igloo', 'HIYAAAAA@gmail.com'),
-(17, 'yoyospinner', 'eifneifie', 'yoyospinner@gmail.com'),
-(20, 'jojoWick', 'efjoefe', 'jojoWick@gmail.com'),
-(22, 'HIYA', 'igloo', 'jojo@gmail.com'),
-(24, 'hello_world', 'yolo', 'hello@gmail.com'),
-(33, 'eofjeoj', 'efjeofjoej', 'efef@gmail.com');
+INSERT INTO `users` (`ID`, `Username`, `password`, `email`, `Admin`) VALUES
+(1, 'johnWick12', 'hellogupta12', 'johnWick12@gmail.com', 0),
+(12, 'yala', 'wio', 'yala@gmail.com', 0),
+(13, 'hiopooloo', 'weifiwfwif', 'hiopooloo@gmail.com', 0),
+(15, 'HIYAAAAA', 'igloo', 'HIYAAAAA@gmail.com', 0),
+(17, 'yoyospinner', 'eifneifie', 'yoyospinner@gmail.com', 0),
+(20, 'jojoWick', 'efjoefe', 'jojoWick@gmail.com', 0),
+(22, 'HIYA', 'igloo', 'jojo@gmail.com', 0),
+(24, 'hello_world', 'yolo', 'hello@gmail.com', 0),
+(33, 'eofjeoj', 'efjeofjoej', 'efef@gmail.com', 0),
+(34, 'Detroit', 'bodbcat', 'jtt50190@uga.edu', 0),
+(35, 'admin', 'admin', 'admin@gmail.com', 1);
 
 --
 -- Indexes for dumped tables
@@ -171,13 +176,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
