@@ -8,12 +8,12 @@
     else if(isset($_POST["checkout"]))
         removeAllItems();
 
-    if(isset($_POST["Page"])) {
+    if(isset($_POST["Page"]) && isset($_SESSION["uname"])) {
         $tab = $_POST["Page"];
         header("Location: ../html_files/$tab.php");
     }
     else {
-        header("Location: ../html_files/index.php");
+        header("Location: ../html_files/signup.php");
     }
 
     function addToCart() {
