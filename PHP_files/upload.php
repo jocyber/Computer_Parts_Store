@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 
 <html>
-    <head></head>
+    <head>
+        <script src="../js_files/scripts.js" type="text/javascript"></script>
+    </head>
 
     <body>
         <br>
         <form action="" method="POST" enctype="multipart/form-data">
-            <input type="file" name="file">
+            <input type="file" name="file" style="color:white;" required>
+            <br><br>
+            <label for="price" style="color:white;">Price:</label>
+            <input type="number" name="price" id="price" onchange="setTwoNumberDecimal" min="0" step="0.01" value="0.00" required>
             <br><br>
             <button type="submit" name="submit" class="cart_button">Upload</button>
         </form>
@@ -43,8 +48,7 @@
 
                         move_uploaded_file($name, $fileDest);
 
-                        $price = rand(50, 150); // change based on type of item
-                        $price += .99;
+                        $price = $_POST['price'];
 
                         $img_path = $img_path.$name;
 
@@ -63,4 +67,4 @@
             }
         }
     ?>
-</html>
+</html>\
