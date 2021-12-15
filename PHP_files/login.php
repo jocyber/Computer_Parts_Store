@@ -30,9 +30,15 @@
             return;
         }
 
+        $result = mysqli_query($conn, "select admin from users where Username='$username' and password='$password'");
+        $row = mysqli_fetch_assoc($result);
+        $admin = $row["admin"];
+
         $_SESSION["uname"] = $username;
         $_SESSION["psw"] = $password;
-
+        if($admin == 1) {
+            $_SESSION["lvl"] = $admin;
+        }
         mysqli_close($conn);
     }
 
@@ -80,7 +86,7 @@
         $info = array();
         $info["email"] = $email;
         $info["username"] = $username;
-        $info["password"] = $password;
+        $info["password"] = $password; 
         $info["connection"] = $conn;
 
         return $info;
