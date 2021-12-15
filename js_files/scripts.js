@@ -35,7 +35,7 @@ function validateEmail() {
 function validateUsername() {      
     let data = new FormData();
     data.append("user", document.getElementById("username").value);
-    //regular expression for email
+    //regular expression for username
     const userPattern = new RegExp(
         /^[a-zA-Z\-]+$/
     );
@@ -51,7 +51,7 @@ function validateUsername() {
 function validatePassword() {      
     let data = new FormData();
     data.append("pass", document.getElementById("password").value);
-    //regular expression for email
+    //regular expression for password
     const passwordPattern = new RegExp(
         /^[a-zA-Z\-]+$/
     );
@@ -64,4 +64,7 @@ function validatePassword() {
     return false;
 } 
 
+function setTwoNumberDecimal(event) {
+    this.value = parseFloat(this.value).toFixed(2);
+}
 
