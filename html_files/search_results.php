@@ -51,9 +51,6 @@ session_start();
                 </div>
 
                 <br><br>
-                <label for="remember" style="display: block;">
-                    <input type="checkbox" name="remember" class="checkbox"> Remember me
-                </label>
                 <br><br>
 
                 <div class="container" style="background-color:#f1f1f1">

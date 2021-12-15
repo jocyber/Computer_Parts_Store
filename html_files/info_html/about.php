@@ -48,15 +48,12 @@
                 </div>
 
                 <br><br>
-                <label for="remember" style="display: block;">
-                    <input type="checkbox" name="remember" class="checkbox"> Remember me
-                </label>
                 <br><br>
 
                 <div class="container" style="background-color:#f1f1f1">
                     <button type="button" onclick="document.getElementById(\'id01\').style.display=\'none\'" class="cancelbtn">Cancel</button>
                     <a href="../../html_files/signup.php">Sign up</a>
-                    <span class="psw">Forgot <a href="reset_password.php">password?</a></span>
+                    <span class="psw">Forgot <a href="../reset_password.php">password?</a></span>
                 </div>
             </form>
         </div>
@@ -87,8 +84,8 @@
 
          <!--Store's logo-->                                                                                                  
          <div>
-            <a href="index.php">
-             <img src="../../images/logo.png" alt="kawaii anime" title="home page" id="icon">
+            <a href="../index.php">
+             <img src="../../images/logo.png" alt="Store logo" title="home page" id="icon">
 	        </a>
         </div>
 

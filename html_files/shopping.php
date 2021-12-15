@@ -132,7 +132,7 @@
                // echo "$_SESSION['uname']";
         
                 $username = $_SESSION["uname"];
-                $password = $_SESSION["passw"];
+                $password = $_SESSION["psw"];
         
                 $result = mysqli_query($conn, "select * from cart inner join users on users.Username='$username' and cart.UserID=users.ID;");
                 $resultCheck = mysqli_num_rows($result);

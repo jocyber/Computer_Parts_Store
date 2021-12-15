@@ -1,19 +1,20 @@
 <?php
-
     session_start();
 
-    if(isset($_POST["logout"])) 
-        logout();
-    else if(isset($_POST["signup"]))
+
+    if(isset($_POST["signup"]))
         signup();
+    else if(isset($_POST["logout"])) 
+        logout();
     else
         login();
 
     header("Location: ../html_files/index.php");
 
     function logout() {
-        if(isset($_SESSION["uname"]))
+        if(isset($_SESSION["uname"])) {
             session_destroy();
+        }
     }
 
     function login() {
@@ -30,7 +31,8 @@
         }
 
         $_SESSION["uname"] = $username;
-        $_SESSION["passw"] = $password;
+        $_SESSION["psw"] = $password;
+
         mysqli_close($conn);
     }
 
@@ -54,12 +56,13 @@
             $query = mysqli_query($conn, "insert into users (Username, password, email) values ('$username', '$password', '$email')");
 
             if(isset($_POST["remember"])) {
-                setcookie("uname", $username, time() + 31536000);
+                setcookie("username", $username, time() + 31536000);
             }
 
             $_SESSION["eml"] = $email;
             $_SESSION["uname"] = $username;
             $_SESSION["psw"] = $password;
+
             mysqli_close($conn);
         } 
         else { // username or email is already in use

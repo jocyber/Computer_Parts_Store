@@ -1,5 +1,6 @@
 <?php
-session_start();
+    session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -59,8 +60,6 @@ session_start();
                 </div>
 
                 <br><br>
-                <label for="remember" style="display: block;">
-                    <input type="checkbox" name="remember" class="checkbox"> Remember me
                 </label>
                 <br><br>
 
