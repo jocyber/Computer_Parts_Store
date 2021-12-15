@@ -119,7 +119,7 @@ session_start();
         <!--where products appear-->
         <div class="page_border">
         <?php
-            $conn = mysqli_connect("127.0.0.1", "root", "", "computer_store");
+            require("../PHP_files/connect_DB.php");
 
             if (isset($_GET['q']) && $_GET['q'] !=  '') {
 
@@ -136,8 +136,9 @@ session_start();
                 $stmt->bind_param("s", $words);
                 $stmt->execute();
                 
-                $result = $stmt->get_result() or trigger_error("Query Failed! SQL: $sql - Error: " . mysqli_error($conn), E_USER_ERROR);;
+                $result = $stmt->get_result();
                 $result_count = mysqli_num_rows($result);
+                $stmt->close();
 
                 if ($result_count > 0) {
                     //display result count
@@ -170,11 +171,12 @@ session_start();
                     // end table
                     echo '</table>';
                 } else {
-                    echo '<div style="text-align:Left; color: white; padding: 1em;font-size: 1.5em"><b>No results found.</b> results found</div>';
+                    echo '<div style="text-align:Left; color: white; padding: 1em;font-size: 1.5em"><b>No results found.</b></div>';
                 }
             } else {
                 echo ' ';
             }
+            mysqli_close($conn);
             ?>
         </div>
         <!--Bottom styling-->
