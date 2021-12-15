@@ -118,21 +118,21 @@
         <p class="direct"><a id="dir" href="index.php">Home &nbsp</a><span style="color:gray;"> >&nbsp Components</span></p>
         <hr>
 
-        <!--sign up form-->
+        <!--reset password form-->
         <br><br>
-        <form action="../PHP_files/password.php" style="border:1px solid #ccc" method="post">
+        <form action="../PHP_files/password.php" style="border:1px solid #ccc" method="post" onsubmit="return validatePassword()">
             <div class="reset" id="eform">
             <div class="container" style="color: white;">
                 <h1>Reset Password</h1>
                 <p>Please fill in this form to reset your password.</p>
                 <hr>
-
-                <label for="eml"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="eml" required>
-
-                <label for="npsw"><b>New Password</b></label>
-                <input type="password" placeholder="Enter New Password" name="npsw" required>
                 
+                <label for="eml"><b>Email</b></label>
+                <input id="email" type="text" placeholder="Enter Email" name="eml" required>
+
+                <label for="psw"><b>New Password</b></label>
+                <input type="password" placeholder="Enter New Password" name="psw" required>
+
                 <div class="clearfix">
                 <button type="submit" name ="reset" class="cancelbtn" style="margin-top: 0;">Reset Password</button>
                 </div>
