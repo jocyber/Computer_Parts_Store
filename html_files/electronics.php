@@ -117,6 +117,15 @@
         <br><br><br><br><br>
         <p class="direct"><a id="dir" href="index.php">Home &nbsp</a><span style="color:gray;"> >&nbsp Computer Systems</span></p>
         <hr>
+        
+        <!--admin product UI-->
+        <div style="float: left;">
+        <?php
+        if(isset($_SESSION["lvl"])) {
+            $folder= "electronics"; require_once('../PHP_files/upload.php');
+        }
+        ?>
+        </div>
 
         <!--where products appear-->
         <div class="page_border">

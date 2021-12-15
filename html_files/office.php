@@ -118,6 +118,15 @@
         <p class="direct"><a id="dir" href="index.php">Home &nbsp</a><span style="color:gray;"> >&nbsp Office Accessories</span></p>
         <hr>
 
+        <!--admin product UI-->
+        <div style="float: left;">
+        <?php
+        if(isset($_SESSION["lvl"])) {
+            $folder= "office"; require_once('../PHP_files/upload.php');
+        }
+        ?>
+        </div>
+
         <!--where products appear-->
         <div class="page_border">
             <?php $tab = "office"; require_once('../PHP_files/query_database.php'); ?>

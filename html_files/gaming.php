@@ -37,7 +37,7 @@
             <form class="modal-content animate" action="../PHP_files/login.php" method="post">
                 <div class="imgcontainer">
                     <span onclick="document.getElementById(\'id01\').style.display=\'none\'" class="close" title="Close Modal">&times;</span>
-                    </div>
+                </div>
 
                 <div class="container">
                     <label for="uname"><b>Username</b></label>
@@ -117,6 +117,15 @@
         <br><br><br><br><br>
         <p class="direct"><a id="dir" href="index.php">Home &nbsp</a><span style="color:gray;"> >&nbsp Gaming</span></p>
         <hr>
+
+        <!--admin product UI-->
+        <div style="float: left;">
+        <?php
+        if(isset($_SESSION["lvl"])) {
+            $folder= "gaming"; require_once('../PHP_files/upload.php');
+        }
+        ?>
+        </div>
 
         <!--where products appear-->
         <div class="page_border">
