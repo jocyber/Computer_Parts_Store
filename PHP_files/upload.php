@@ -21,6 +21,7 @@
 
         $table = "products";
         $type = strtolower($folder);
+        $folder = ucfirst($folder);
 
         if(isset($_POST["submit"])) {
             require_once("connect_DB.php");
