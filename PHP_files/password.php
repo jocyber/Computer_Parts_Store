@@ -34,7 +34,7 @@
         require_once("connect_DB.php");
 
         $email = $_POST["eml"];
-        $new_password = $_POST["npsw"];
+        $new_password = $_POST["psw"];
 
         $info = array();
         $info["email"] = $email;
